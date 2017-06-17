@@ -44,7 +44,9 @@ public class Language {
         this.name = name;
         return this;
     }
-
+    public String getNameAsValue() {
+        return "'"+getName()+"'";
+    }
     public String getDescription() {
         return description;
     }
