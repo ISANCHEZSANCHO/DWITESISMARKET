@@ -61,28 +61,27 @@ public class LevelsEntity extends BaseEntity {
     }
 
 
-    public boolean add(Language language){
-        String sql = "INSERT INTO languages(language_id, language_name, language_description) " +
-                "VALUES(" + language.getIdAsString() + ", " +
-                language.getNameAsValue() + ")";
+    public boolean add(Level level){
+        String sql = "INSERT INTO levels(level_id, level_name, level_description) " +
+                "VALUES(" + level.getIdAsString() + ", " +
+                level.getNameAsValue() + ")";
         return change(sql);
 
     }
-    public boolean delete(Language language) {
-        String sql = "DELETE FROM languages WHERE language_id = " + language.getIdAsString();
+    public boolean delete(Level level) {
+        String sql = "DELETE FROM levels WHERE level_id = " + level.getIdAsString();
         return change(sql);
     }
     public boolean delete(String name) {
-        return change("DELETE FROM language WHERE language_name = " +
+        return change("DELETE FROM level WHERE level_name = " +
                 "'" + name + "'");
     }
 
-    public boolean update(Language language) {
-        String sql = "UPDATE languages SET language_name = " + language.getNameAsValue() +
-                " WHERE language_id = " + language.getIdAsString();
+    public boolean update(Level level) {
+        String sql = "UPDATE levels SET level_name = " + level.getNameAsValue() +
+                " WHERE level_id = " + level.getIdAsString();
         return change(sql);
     }
-
 
 
 

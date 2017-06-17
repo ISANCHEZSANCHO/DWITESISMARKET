@@ -35,7 +35,9 @@ public class Level {
         this.id = id;
         return this;
     }
-
+    public String getNameAsValue() {
+        return "'"+getName()+"'";
+    }
     public String getName() {
         return name;
     }
