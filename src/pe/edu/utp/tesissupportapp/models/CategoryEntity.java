@@ -56,5 +56,29 @@ public class CategoryEntity extends BaseEntity {
         return null;
     }
 
+    public boolean add(Category category) {
+        String sql = "INSERT INTO categories(category_id, category_name, category_description, category_photo) " +
+                "VALUES(" + category.getIdAsString() + ", " +
+                category.getNameAsValue() + ")";
+        return change(sql);
+    }
+
+    public boolean delete(Category category) {
+        String sql = "DELETE FROM categories WHERE category_id = " + category.getIdAsString();
+        return change(sql);
+    }
+
+    public boolean delete(String name) {
+        return change("DELETE FROM categories WHERE category_name = " +
+                "'" + name + "'");
+    }
+
+       public boolean update(Category category) {
+        String sql = "UPDATE categories SET category_name = " + category.getNameAsValue() +
+                " WHERE category_id = " + category.getIdAsString();
+        return change(sql);
+    }
+
+
 
 }
