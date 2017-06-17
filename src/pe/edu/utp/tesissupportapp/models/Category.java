@@ -46,6 +46,10 @@ public class Category {
         return this;
     }
 
+    public String getNameAsValue() {
+        return "'"+getName()+"'";
+    }
+
     public String getDescription() {
         return description;
     }

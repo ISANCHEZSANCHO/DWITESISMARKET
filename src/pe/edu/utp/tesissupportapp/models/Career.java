@@ -72,5 +72,18 @@ public class Career {
         return this;
     }
 
+    public static Career build(ResultSet rs, CategoriesEntity categoriesEntity) {
+        try {
+            return (new Career())
+                    .setId(rs.getInt(""))
+                    .setName(rs.getString("career_id"))
+                    .setDescription(rs.getString("career_description"))
+                    .setCategory(categoriesEntity.findById(rs.getInt("category_id")))
+                    .setPhoto(rs.getString("career_photo"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
   
 }

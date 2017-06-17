@@ -9,19 +9,19 @@ import java.util.List;
 /**
  * Created by USER on 16/06/2017.
  */
-public class CareerEntity extends BaseEntity {
-    public CareerEntity() {
+public class CareersEntity extends BaseEntity {
+    public CareersEntity() {
         super();
-setTableName("careers");
+        setTableName("careers");
     }
 
-    public CareerEntity(Connection connection) {
+    public CareersEntity(Connection connection) {
         super(connection, "careers");
     }
 
     public List<Career> findByCriteria(
             String criteria,
-            CategoryEntity categoryEntity) {
+            CategoriesEntity categoriesEntity) {
         String sql = getDefaultQuery() +
                 (criteria.isEmpty() ? "" : " WHERE " + criteria);
         List<Career> careers = new ArrayList<>();
@@ -32,7 +32,7 @@ setTableName("careers");
             if(rs == null) return null;
             while(rs.next()) {
                 careers.add(
-                        Career.build(rs, categoryEntity));
+                        Career.build(rs, categoriesEntity));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -40,18 +40,29 @@ setTableName("careers");
         return careers;
     }
 
-    public List<Career> findAll(CategoryEntity categoryEntity) {
-        return findByCriteria("", categoryEntity);
+    public List<Career> findAll(CategoriesEntity categoriesEntity) {
+        return findByCriteria("", categoriesEntity);
     }
 
-    public Career findById(int id, CategoryEntity categoryEntity) {
+    public Career findById(int id, CategoriesEntity categoriesEntity) {
         try {
             String sql = "career_id = " + String.valueOf(id);
-            return findByCriteria(sql, categoryEntity).get(0);
+            return findByCriteria(sql, categoriesEntity).get(0);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
 
     }
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -9,21 +9,20 @@ import java.util.List;
 /**
  * Created by USER on 16/06/2017.
  */
-public class CategoryEntity extends BaseEntity {
+public class CategoriesEntity extends BaseEntity {
 
-    public CategoryEntity(Connection connection) {
+    public CategoriesEntity(Connection connection) {
         super(connection, "categories");
     }
 
-    public CategoryEntity(){ super();}
+    public CategoriesEntity(){ super();}
 
     List<Category> findAll() {
         return findByCriteria("");
     }
 
     public Category findById(int id) {
-        String criteria = " category_id = " +
-                String.valueOf(id);
+        String criteria = " category_id = " + String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
 
