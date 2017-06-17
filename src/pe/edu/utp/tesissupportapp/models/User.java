@@ -48,7 +48,7 @@ private String lastName;
     public int getId() {
         return id;
     }
-
+    
 
     public String getIdAsString() {
         return String.valueOf(getId());
@@ -57,6 +57,12 @@ private String lastName;
         public User setId(int id) {
         this.id = id;
         return this;
+    }
+
+
+
+    public String getNameAsValue() {
+        return "'"+getUser()+"'";
     }
 
     public String getUser() {

@@ -44,7 +44,7 @@ public class LanguagesEntity extends BaseEntity {
                     languages.add((new Language())
                             .setId(resultSet.getInt("language_id"))
                             .setName(resultSet.getString("language_name"))
-                            .setName(resultSet.getString("language_description"))
+                            .setDescription(resultSet.getString("language_description"))
 
                     );
 

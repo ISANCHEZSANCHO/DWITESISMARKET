@@ -9,43 +9,43 @@ import java.util.List;
 /**
  * Created by George on 17/06/2017.
  */
-public class StatesEntity extends BaseEntity {
+public class StatusesEntity extends BaseEntity {
 
-    public StatesEntity (Connection connection){
+    public StatusesEntity(Connection connection){
         super(connection,"statuses");
 
 }
-    public StatesEntity () {super ();}
+    public StatusesEntity() {super ();}
 
-    List<State> findAll(){
+    List<Statuses> findAll(){
         return findByCriteria("");
     }
 
-    public State findById (int id) {
+    public Statuses findById (int id) {
 
         String criteria = "status_id = " +
                 String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
-    public List<State> findAllOrderedByName(){
+    public List<Statuses> findAllOrderedByName(){
         String criteria ="true ORDER BY status_name";
         return findByCriteria(criteria);
     }
 
-    public List<State> findByCriteria(String criteria){
+    public List<Statuses> findByCriteria(String criteria){
         String sql = getDefaultQuery() +
                 criteria == "" ? "" : " WHERE " + criteria;
-        List <State> states = new ArrayList<>();
+        List <Statuses> statuses = new ArrayList<>();
         try{
             ResultSet resultSet = getConnection()
                     .createStatement()
                     .executeQuery(sql);
             if (resultSet==null) return null;
             while (resultSet.next()){
-                states.add((new State())
+                statuses.add((new Statuses())
                         .setId(resultSet.getInt("status_id"))
                         .setName(resultSet.getString("status_name"))
-                        .setName(resultSet.getString("status_description"))
+                        .setDescription(resultSet.getString("status_description"))
 
                 );
 
@@ -53,7 +53,7 @@ public class StatesEntity extends BaseEntity {
 
 
             }
-            return states;
+            return statuses;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -61,15 +61,15 @@ public class StatesEntity extends BaseEntity {
     }
 
 
-    public boolean add(State state){
-        String sql = "INSERT INTO state(status_id, status_name, status_description) " +
-                "VALUES(" + state.getIdAsString() + ", " +
-                state.getNameAsValue() + ")";
+    public boolean add(Statuses statuses){
+        String sql = "INSERT INTO statuses(status_id, status_name, status_description) " +
+                "VALUES(" + statuses.getIdAsString() + ", " +
+                statuses.getNameAsValue() + ")";
         return change(sql);
 
     }
-    public boolean delete(State state) {
-        String sql = "DELETE FROM status WHERE status_id = " + state.getIdAsString();
+    public boolean delete(Statuses statuses) {
+        String sql = "DELETE FROM status WHERE status_id = " + statuses.getIdAsString();
         return change(sql);
     }
     public boolean delete(String name) {
@@ -77,9 +77,9 @@ public class StatesEntity extends BaseEntity {
                 "'" + name + "'");
     }
 
-    public boolean update(State state) {
-        String sql = "UPDATE status SET status_name = " + state.getNameAsValue() +
-                " WHERE status_id = " + state.getIdAsString();
+    public boolean update(Statuses statuses) {
+        String sql = "UPDATE status SET status_name = " + statuses.getNameAsValue() +
+                " WHERE status_id = " + statuses.getIdAsString();
         return change(sql);
     }
 

@@ -32,6 +32,10 @@ public class StudyCenter {
 
     }
 
+    public String getNameAsValue() {
+        return "'"+getName()+"'";
+    }
+
 
     public int getId() {
         return id;

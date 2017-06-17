@@ -45,7 +45,7 @@ public class LevelsEntity extends BaseEntity {
                 levels.add((new Level())
                         .setId(resultSet.getInt("level_id"))
                         .setName(resultSet.getString("level_name"))
-                        .setName(resultSet.getString("level_description"))
+                        .setDescription(resultSet.getString("level_description"))
 
                 );
 

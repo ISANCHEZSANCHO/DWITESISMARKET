@@ -6,19 +6,19 @@ import java.sql.SQLException;
 /**
  * Created by USER on 16/06/2017.
  */
-public class State {
+public class Statuses {
 
     private int id;
     private String name;
     private String description;
 
-    public State(int id, String name, String description) {
+    public Statuses(int id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public State() {
+    public Statuses() {
 
     }
 
@@ -30,7 +30,7 @@ public class State {
         return String.valueOf(getId());
     }
 
-    public State setId(int id) {
+    public Statuses setId(int id) {
         this.id = id;
         return this;
     }
@@ -41,7 +41,7 @@ public class State {
         return name;
     }
 
-    public State setName(String name) {
+    public Statuses setName(String name) {
         this.name = name;
         return this;
     }
@@ -50,14 +50,14 @@ public class State {
         return description;
     }
 
-    public State setDescription(String description) {
+    public Statuses setDescription(String description) {
         this.description = description;
         return this;
     }
 
-    public static State build(ResultSet resultSet) {
+    public static Statuses build(ResultSet resultSet) {
         try {
-            return (new State())
+            return (new Statuses())
                     .setId(resultSet.getInt("status_id"))
                     .setName(resultSet.getString("status_name"))
                     .setName(resultSet.getString("status_description"));
