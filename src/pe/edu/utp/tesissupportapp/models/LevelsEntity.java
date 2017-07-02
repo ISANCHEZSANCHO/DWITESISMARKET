@@ -23,7 +23,7 @@ public class LevelsEntity extends BaseEntity {
 
     public Level findById (int id) {
 
-        String criteria = "level_id = " +
+        String criteria = "id = " +
                 String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
@@ -43,14 +43,11 @@ public class LevelsEntity extends BaseEntity {
             if (resultSet==null) return null;
             while (resultSet.next()){
                 levels.add((new Level())
-                        .setId(resultSet.getInt("level_id"))
-                        .setName(resultSet.getString("level_name"))
-                        .setDescription(resultSet.getString("level_description"))
+                        .setId(resultSet.getInt("id"))
+                        .setName(resultSet.getString("name"))
+                        .setDescription(resultSet.getString("description"))
 
                 );
-
-
-
 
             }
             return levels;
@@ -62,24 +59,27 @@ public class LevelsEntity extends BaseEntity {
 
 
     public boolean add(Level level){
-        String sql = "INSERT INTO levels(level_id, level_name, level_description) " +
+        String sql = "INSERT INTO levels(id, name, description) " +
                 "VALUES(" + level.getIdAsString() + ", " +
-                level.getNameAsValue() + ")";
+                level.getNameAsValue() +
+                level.getDescriptionAsValue() + ")";
         return change(sql);
 
     }
     public boolean delete(Level level) {
-        String sql = "DELETE FROM levels WHERE level_id = " + level.getIdAsString();
+        String sql = "DELETE FROM levels WHERE id = " + level.getIdAsString();
         return change(sql);
     }
     public boolean delete(String name) {
-        return change("DELETE FROM level WHERE level_name = " +
+        return change("DELETE FROM level WHERE name = " +
                 "'" + name + "'");
     }
 
     public boolean update(Level level) {
-        String sql = "UPDATE levels SET level_name = " + level.getNameAsValue() +
-                " WHERE level_id = " + level.getIdAsString();
+        String sql = "UPDATE levels SET " +
+                "name = " + level.getNameAsValue() + ", " +
+                "description = " + level.getDescriptionAsValue() + ", " +
+                " WHERE id = " + level.getIdAsString();
         return change(sql);
     }
 
