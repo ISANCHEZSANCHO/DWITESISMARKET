@@ -40,15 +40,21 @@ public class Language {
         return name;
     }
 
+    public String getNameAsValue() {
+        return "'"+getName()+"'";
+    }
+
     public Language setName(String name) {
         this.name = name;
         return this;
     }
-    public String getNameAsValue() {
-        return "'"+getName()+"'";
-    }
+
     public String getDescription() {
         return description;
+    }
+
+    public String getDescriptionAsValue() {
+        return "'"+getDescription()+"'";
     }
 
     public Language setDescription(String description) {
@@ -59,9 +65,9 @@ public class Language {
     public static Language build(ResultSet resultSet) {
         try {
             return (new Language())
-                    .setId(resultSet.getInt("language_id"))
-                    .setName(resultSet.getString("language_name"))
-                    .setName(resultSet.getString("language_description"));
+                    .setId(resultSet.getInt("id"))
+                    .setName(resultSet.getString("name"))
+                    .setName(resultSet.getString("escription"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
