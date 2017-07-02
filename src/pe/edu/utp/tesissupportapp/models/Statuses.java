@@ -34,11 +34,12 @@ public class Statuses {
         this.id = id;
         return this;
     }
-    public String getNameAsValue() {
-        return "'"+getName()+"'";
-    }
+
     public String getName() {
         return name;
+    }
+    public String getNameAsValue() {
+        return "'"+getName()+"'";
     }
 
     public Statuses setName(String name) {
@@ -50,6 +51,9 @@ public class Statuses {
         return description;
     }
 
+    public String getDescriptionAsValue() {
+        return "'"+getDescription()+"'";
+    }
     public Statuses setDescription(String description) {
         this.description = description;
         return this;
@@ -58,9 +62,9 @@ public class Statuses {
     public static Statuses build(ResultSet resultSet) {
         try {
             return (new Statuses())
-                    .setId(resultSet.getInt("status_id"))
-                    .setName(resultSet.getString("status_name"))
-                    .setName(resultSet.getString("status_description"));
+                    .setId(resultSet.getInt("id"))
+                    .setName(resultSet.getString("name"))
+                    .setName(resultSet.getString("description"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
