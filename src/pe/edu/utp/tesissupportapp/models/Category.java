@@ -11,16 +11,16 @@ public class Category {
     private int id;
     private String name;
     private String description;
-    private String photo;
+    private String photoPath;
 
     public Category() {
     }
 
-    public Category(int id, String name, String description, String photo) {
+    public Category(int id, String name, String description, String photoPhat) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.photo = photo;
+        this.photoPath = photoPhat;
     }
 
 
@@ -41,17 +41,23 @@ public class Category {
         return name;
     }
 
+    public String getNameAsValue() {
+        return "'" + getName() + "'";
+    }
+
     public Category setName(String name) {
         this.name = name;
         return this;
     }
 
-    public String getNameAsValue() {
-        return "'"+getName()+"'";
-    }
+
 
     public String getDescription() {
         return description;
+    }
+
+    public String getDescriptionAsValue() {
+        return "'"+getDescription()+"'";
     }
 
     public Category setDescription(String description) {
@@ -59,22 +65,25 @@ public class Category {
         return this;
     }
 
-    public String getPhoto() {
-        return photo;
+       public String getPhotoPath() {
+        return photoPath;
     }
 
-    public Category setPhoto(String photo) {
-        this.photo = photo;
+    public String getPhotoPathAsValue() {
+        return "'"+getPhotoPath()+"'";}
+
+    public Category setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
         return this;
     }
 
     public static Category build(ResultSet resultSet) {
         try {
             return (new Category())
-                    .setId(resultSet.getInt("category_id"))
-                    .setName(resultSet.getString("category_name"))
-                            .setName(resultSet.getString("category_description"))
-                                    .setName(resultSet.getString("category_photo")
+                    .setId(resultSet.getInt("id"))
+                    .setName(resultSet.getString("name"))
+                            .setName(resultSet.getString("description"))
+                                    .setName(resultSet.getString("photo_path")
 
                     );
         } catch (SQLException e) {

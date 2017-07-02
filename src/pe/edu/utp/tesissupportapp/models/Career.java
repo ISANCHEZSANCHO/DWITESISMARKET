@@ -63,11 +63,11 @@ public class Career {
         return this;
     }
 
-    public String getPhoto() {
+    public String getPhotoPath() {
         return photoPath;
     }
 
-    public Career setPhoto(String photo) {
+    public Career setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
         return this;
     }
@@ -79,7 +79,7 @@ public class Career {
                     .setName(rs.getString("name"))
                     .setDescription(rs.getString("description"))
                     .setCategory(categoriesEntity.findById(rs.getInt("category_id")))
-                    .setPhoto(rs.getString("photo_path"));
+                    .setPhotoPath(rs.getString("photo_path"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
