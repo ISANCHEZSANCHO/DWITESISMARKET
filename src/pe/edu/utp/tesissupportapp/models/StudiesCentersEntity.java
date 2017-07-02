@@ -51,7 +51,7 @@ public class StudiesCentersEntity extends BaseEntity {
                         .setCity(resultSet.getString("studies_center_city"))
                         .setCountry(resultSet.getString("studies_center_country"))
                         .setPhone(resultSet.getString("studies_center_phone"))
-                        .setPhoto(resultSet.getString("studies_center_photo"))
+                        .setPhotoPath(resultSet.getString("studies_center_photo"))
 
                 );
 
