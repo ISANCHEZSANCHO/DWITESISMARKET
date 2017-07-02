@@ -12,14 +12,14 @@ public class Career {
     private String name;
     private String description;
     private Category category;
-    private String photo;
+    private String photoPath;
 
-    public Career(int id, String name, String description, Category category, String photo) {
+    public Career(int id, String name, String description, Category category, String photoPath) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.category = category;
-        this.photo = photo;
+        this.photoPath = photoPath;
     }
 
     public Career() {
@@ -64,22 +64,22 @@ public class Career {
     }
 
     public String getPhoto() {
-        return photo;
+        return photoPath;
     }
 
     public Career setPhoto(String photo) {
-        this.photo = photo;
+        this.photoPath = photoPath;
         return this;
     }
 
     public static Career build(ResultSet rs, CategoriesEntity categoriesEntity) {
         try {
             return (new Career())
-                    .setId(rs.getInt(""))
-                    .setName(rs.getString("career_id"))
-                    .setDescription(rs.getString("career_description"))
+                    .setId(rs.getInt("id"))
+                    .setName(rs.getString("name"))
+                    .setDescription(rs.getString("description"))
                     .setCategory(categoriesEntity.findById(rs.getInt("category_id")))
-                    .setPhoto(rs.getString("career_photo"));
+                    .setPhoto(rs.getString("photo_path"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
