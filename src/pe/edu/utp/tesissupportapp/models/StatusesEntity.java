@@ -23,12 +23,12 @@ public class StatusesEntity extends BaseEntity {
 
     public Statuses findById (int id) {
 
-        String criteria = "status_id = " +
+        String criteria = "id = " +
                 String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
     public List<Statuses> findAllOrderedByName(){
-        String criteria ="true ORDER BY status_name";
+        String criteria ="true ORDER BY name";
         return findByCriteria(criteria);
     }
 
@@ -43,9 +43,9 @@ public class StatusesEntity extends BaseEntity {
             if (resultSet==null) return null;
             while (resultSet.next()){
                 statuses.add((new Statuses())
-                        .setId(resultSet.getInt("status_id"))
-                        .setName(resultSet.getString("status_name"))
-                        .setDescription(resultSet.getString("status_description"))
+                        .setId(resultSet.getInt("id"))
+                        .setName(resultSet.getString("sname"))
+                        .setDescription(resultSet.getString("description"))
 
                 );
 
@@ -62,24 +62,27 @@ public class StatusesEntity extends BaseEntity {
 
 
     public boolean add(Statuses statuses){
-        String sql = "INSERT INTO statuses(status_id, status_name, status_description) " +
+        String sql = "INSERT INTO statuses(id, name, description) " +
                 "VALUES(" + statuses.getIdAsString() + ", " +
-                statuses.getNameAsValue() + ")";
+                statuses.getNameAsValue() +
+                statuses.getDescriptionAsValue() + ")";
         return change(sql);
 
     }
     public boolean delete(Statuses statuses) {
-        String sql = "DELETE FROM status WHERE status_id = " + statuses.getIdAsString();
+        String sql = "DELETE FROM status WHERE id = " + statuses.getIdAsString();
         return change(sql);
     }
     public boolean delete(String name) {
-        return change("DELETE FROM status WHERE status_name = " +
+        return change("DELETE FROM status WHERE name = " +
                 "'" + name + "'");
     }
 
     public boolean update(Statuses statuses) {
-        String sql = "UPDATE status SET status_name = " + statuses.getNameAsValue() +
-                " WHERE status_id = " + statuses.getIdAsString();
+        String sql = "UPDATE levels SET " +
+                "name = " + statuses.getNameAsValue() + ", " +
+                "description = " + statuses.getDescriptionAsValue() + ", " +
+                " WHERE id = " + statuses.getIdAsString();
         return change(sql);
     }
 

@@ -28,7 +28,7 @@ public class LevelsEntity extends BaseEntity {
         return findByCriteria(criteria).get(0);
     }
     public List<Level> findAllOrderedByName(){
-        String criteria ="true ORDER BY level_name";
+        String criteria ="true ORDER BY name";
         return findByCriteria(criteria);
     }
 
