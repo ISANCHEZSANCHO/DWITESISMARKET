@@ -30,7 +30,7 @@ public class Career {
     public int getId() {
         return id;
     }
-
+    public String getIdAsValue() { return "'" + getId() + "'";}
     public Career setId(int id) {
         this.id = id;
         return this;
@@ -39,7 +39,7 @@ public class Career {
     public String getName() {
         return name;
     }
-
+    public String getNameAsValue() { return "'" + getName() + "'";}
     public Career setName(String name) {
         this.name = name;
         return this;
@@ -48,7 +48,9 @@ public class Career {
     public String getDescription() {
         return description;
     }
-
+    public String getDescriptionAsValue() {
+        return "'"+getDescription()+"'";
+    }
     public Career setDescription(String description) {
         this.description = description;
         return this;
@@ -66,7 +68,8 @@ public class Career {
     public String getPhotoPath() {
         return photoPath;
     }
-
+    public String getPhotoPathAsValue() {
+        return "'"+getPhotoPath()+"'";}
     public Career setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
         return this;
@@ -85,5 +88,7 @@ public class Career {
         }
         return null;
     }
-  
+
+
+
 }
