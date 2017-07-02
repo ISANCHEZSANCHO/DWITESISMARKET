@@ -22,12 +22,12 @@ public class CategoriesEntity extends BaseEntity {
     }
 
     public Category findById(int id) {
-        String criteria = " category_id = " + String.valueOf(id);
+        String criteria = " id = " + String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
 
     public List<Category> findAllOrderedByName() {
-        String criteria = "true ORDER BY category_name";
+        String criteria = "true ORDER BY name";
         return findByCriteria(criteria);
     }
 
@@ -42,10 +42,10 @@ public class CategoriesEntity extends BaseEntity {
             if(resultSet == null) return null;
             while(resultSet.next()) {
                 categories.add((new Category())
-                        .setId(resultSet.getInt("category_id"))
-                        .setName(resultSet.getString("category_name"))
-                        .setDescription(resultSet.getString("category_description"))
-                        .setPhoto(resultSet.getString("category_photo"))
+                        .setId(resultSet.getInt("id"))
+                        .setName(resultSet.getString("name"))
+                        .setDescription(resultSet.getString("description"))
+                        .setPhotoPath(resultSet.getString("photo_path"))
                 );
             }
             return categories;
@@ -56,24 +56,31 @@ public class CategoriesEntity extends BaseEntity {
     }
 
     public boolean add(Category category) {
-        String sql = "INSERT INTO categories(category_id, category_name, category_description, category_photo) " +
+        String sql = "INSERT INTO categories(id, name,description, photo_path) " +
                 "VALUES(" + category.getIdAsString() + ", " +
-                category.getNameAsValue() + ")";
+                category.getNameAsValue() + ", " +
+                category.getDescriptionAsValue() + ", " +
+                category.getPhotoPathAsValue() + ")";
         return change(sql);
     }
 
     public boolean delete(Category category) {
-        String sql = "DELETE FROM categories WHERE category_id = " + category.getIdAsString();
+        String sql = "DELETE FROM categories WHERE id = " + category.getIdAsString();
         return change(sql);
     }
 
     public boolean delete(String name) {
-        return change("DELETE FROM categories WHERE category_name = " +
+        return change("DELETE FROM categories WHERE name = " +
                 "'" + name + "'");
     }
 
+
+
        public boolean update(Category category) {
-        String sql = "UPDATE categories SET category_name = " + category.getNameAsValue() +
+        String sql = "UPDATE categories SET " +
+                "name = " + category.getNameAsValue() + ", " +
+                "description = " + category.getDescriptionAsValue() + ", " +
+                "photo_path = " + category.getPhotoPathAsValue() + ", " +
                 " WHERE category_id = " + category.getIdAsString();
         return change(sql);
     }
