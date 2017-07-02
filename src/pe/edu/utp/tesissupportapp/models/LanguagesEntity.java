@@ -22,12 +22,12 @@ public class LanguagesEntity extends BaseEntity {
 
     public Language findById (int id) {
 
-        String criteria = "language_id = " +
+        String criteria = "id = " +
                 String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
         public List<Language> findAllOrderedByName(){
-            String criteria ="true ORDER BY category_name";
+            String criteria ="true ORDER BY name";
             return findByCriteria(criteria);
         }
 
@@ -42,9 +42,9 @@ public class LanguagesEntity extends BaseEntity {
                 if (resultSet==null) return null;
                 while (resultSet.next()){
                     languages.add((new Language())
-                            .setId(resultSet.getInt("language_id"))
-                            .setName(resultSet.getString("language_name"))
-                            .setDescription(resultSet.getString("language_description"))
+                            .setId(resultSet.getInt("id"))
+                            .setName(resultSet.getString("name"))
+                            .setDescription(resultSet.getString("description"))
 
                     );
 
@@ -61,24 +61,27 @@ public class LanguagesEntity extends BaseEntity {
 
 
     public boolean add(Language language){
-        String sql = "INSERT INTO languages(language_id, language_name, language_description) " +
+        String sql = "INSERT INTO languages(id, name, description) " +
                 "VALUES(" + language.getIdAsString() + ", " +
-                language.getNameAsValue() + ")";
+                language.getNameAsValue() +
+                language.getDescriptionAsValue() + ")";
         return change(sql);
 
     }
     public boolean delete(Language language) {
-        String sql = "DELETE FROM languages WHERE language_id = " + language.getIdAsString();
+        String sql = "DELETE FROM languages WHERE id = " + language.getIdAsString();
         return change(sql);
     }
     public boolean delete(String name) {
-        return change("DELETE FROM language WHERE language_name = " +
+        return change("DELETE FROM languages WHERE name = " +
                 "'" + name + "'");
     }
 
     public boolean update(Language language) {
-        String sql = "UPDATE languages SET language_name = " + language.getNameAsValue() +
-                " WHERE language_id = " + language.getIdAsString();
+        String sql = "UPDATE languages SET " +
+                "name = " + language.getNameAsValue() + ", " +
+                "description = " + language.getDescriptionAsValue() + ", " +
+                                " WHERE id = " + language.getIdAsString();
         return change(sql);
     }
 
