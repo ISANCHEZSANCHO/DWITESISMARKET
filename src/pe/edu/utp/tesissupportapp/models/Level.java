@@ -35,11 +35,12 @@ public class Level {
         this.id = id;
         return this;
     }
-    public String getNameAsValue() {
-        return "'"+getName()+"'";
-    }
+
     public String getName() {
         return name;
+    }
+    public String getNameAsValue() {
+        return "'"+getName()+"'";
     }
 
     public Level setName(String name) {
@@ -51,6 +52,9 @@ public class Level {
         return description;
     }
 
+    public String getDescriptionAsValue() {
+        return "'"+getDescription()+"'";
+    }
     public Level setDescription(String description) {
         this.description = description;
         return this;
@@ -60,9 +64,9 @@ public class Level {
     public static Level build(ResultSet resultSet) {
         try {
             return (new Level())
-                    .setId(resultSet.getInt("level_id"))
-                    .setName(resultSet.getString("level_name"))
-                    .setName(resultSet.getString("level_description"));
+                    .setId(resultSet.getInt("id"))
+                    .setName(resultSet.getString("name"))
+                    .setName(resultSet.getString("description"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
