@@ -5,7 +5,7 @@ import java.sql.SQLException;
 /**
  * Created by KEVIN on 1/07/2017.
  */
-        public class Student {
+    public class Student {
             private int id;
             private String username;
             private String password;
@@ -21,13 +21,13 @@ import java.sql.SQLException;
             private String city;
             private String country;
 
-            public Student() {
-            }
+    public Student() {
+    }
 
-            public Student(int id, String username, String password, String lastName, String firstName, String email, String photoPath, int phoneNumber1, int phoneNumber2, String gender, String degreeDocument, String street, String city, String country) {
-                this.id = id;
-                this.username = username;
-                this.password = password;
+    public Student(int id, String username, String password, String lastName, String firstName, String email, String photoPath, int phoneNumber1, int phoneNumber2, String gender, String degreeDocument, String street, String city, String country) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
         this.lastName = lastName;
         this.firstName = firstName;
         this.email = email;
