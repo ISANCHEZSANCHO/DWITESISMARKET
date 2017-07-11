@@ -45,8 +45,8 @@ import java.sql.SQLException;
         return id;
     }
 
-    public String getIdAsString(int id){
-        return String.valueOf(id);
+    public String getIdAsString(){
+        return String.valueOf(getId());
     }
 
     public Student setId(int id) {
