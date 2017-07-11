@@ -9,40 +9,40 @@ import java.util.List;
 /**
  * Created by George on 17/06/2017.
  */
-public class StatusesEntity extends BaseEntity {
+public class StatusEntity extends BaseEntity {
 
-    public StatusesEntity(Connection connection){
+    public StatusEntity(Connection connection){
         super(connection,"statuses");
 
 }
-    public StatusesEntity() {super ();}
+    public StatusEntity() {super ();}
 
-    List<Statuses> findAll(){
+    List<Status> findAll(){
         return findByCriteria("");
     }
 
-    public Statuses findById (int id) {
+    public Status findById (int id) {
 
         String criteria = "id = " +
                 String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
-    public List<Statuses> findAllOrderedByName(){
+    public List<Status> findAllOrderedByName(){
         String criteria ="true ORDER BY name";
         return findByCriteria(criteria);
     }
 
-    public List<Statuses> findByCriteria(String criteria){
+    public List<Status> findByCriteria(String criteria){
         String sql = getDefaultQuery() +
                 criteria == "" ? "" : " WHERE " + criteria;
-        List <Statuses> statuses = new ArrayList<>();
+        List <Status> statuses = new ArrayList<>();
         try{
             ResultSet resultSet = getConnection()
                     .createStatement()
                     .executeQuery(sql);
             if (resultSet==null) return null;
             while (resultSet.next()){
-                statuses.add((new Statuses())
+                statuses.add((new Status())
                         .setId(resultSet.getInt("id"))
                         .setName(resultSet.getString("sname"))
                         .setDescription(resultSet.getString("description"))
@@ -61,16 +61,16 @@ public class StatusesEntity extends BaseEntity {
     }
 
 
-    public boolean add(Statuses statuses){
-        String sql = "INSERT INTO statuses(id, name, description) " +
-                "VALUES(" + statuses.getIdAsString() + ", " +
-                statuses.getNameAsValue() +
-                statuses.getDescriptionAsValue() + ")";
+    public boolean add(Status status){
+        String sql = "INSERT INTO status(id, name, description) " +
+                "VALUES(" + status.getIdAsString() + ", " +
+                status.getNameAsValue() +
+                status.getDescriptionAsValue() + ")";
         return change(sql);
 
     }
-    public boolean delete(Statuses statuses) {
-        String sql = "DELETE FROM status WHERE id = " + statuses.getIdAsString();
+    public boolean delete(Status status) {
+        String sql = "DELETE FROM status WHERE id = " + status.getIdAsString();
         return change(sql);
     }
     public boolean delete(String name) {
@@ -78,11 +78,11 @@ public class StatusesEntity extends BaseEntity {
                 "'" + name + "'");
     }
 
-    public boolean update(Statuses statuses) {
+    public boolean update(Status status) {
         String sql = "UPDATE levels SET " +
-                "name = " + statuses.getNameAsValue() + ", " +
-                "description = " + statuses.getDescriptionAsValue() + ", " +
-                " WHERE id = " + statuses.getIdAsString();
+                "name = " + status.getNameAsValue() + ", " +
+                "description = " + status.getDescriptionAsValue() + ", " +
+                " WHERE id = " + status.getIdAsString();
         return change(sql);
     }
 
