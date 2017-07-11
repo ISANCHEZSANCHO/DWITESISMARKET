@@ -18,22 +18,22 @@ public class MessagesEntity extends BaseEntity {
         super();
     }
 
-    public List<Message> findAll( StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusEntity statusEntity, CategoriesEntity categoriesEntity) {
-        return findByCriteria("",studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusEntity, categoriesEntity);
+    public List<Message> findAll(StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusesEntity statusesEntity, CategoriesEntity categoriesEntity) {
+        return findByCriteria("",studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusesEntity, categoriesEntity);
     }
 
-    public Message findById(String id, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusEntity statusEntity, CategoriesEntity categoriesEntity) {
+    public Message findById(String id, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusesEntity statusesEntity, CategoriesEntity categoriesEntity) {
         String criteria = "id = " + "'" + id + "'";
-        return findByCriteria(criteria,studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusEntity, categoriesEntity).get(0);
+        return findByCriteria(criteria,studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusesEntity, categoriesEntity).get(0);
     }
 
-    public List<Message> findByCriteria(String criteria, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusEntity statusEntity, CategoriesEntity categoriesEntity) {
+    public List<Message> findByCriteria(String criteria, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusesEntity statusesEntity, CategoriesEntity categoriesEntity) {
         String sql = getDefaultQuery() + (criteria.isEmpty() ? "" : " WHERE " + criteria);
         List<Message> messages = new ArrayList<>();
         try {
             ResultSet rs = getConnection().createStatement().executeQuery(sql);
             if(rs == null) return null;
-            while(rs.next()) messages.add(Message.build(rs,studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusEntity, categoriesEntity));
+            while(rs.next()) messages.add(Message.build(rs,studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusesEntity, categoriesEntity));
             return messages;
         } catch(SQLException e) {
             e.printStackTrace();
@@ -41,13 +41,13 @@ public class MessagesEntity extends BaseEntity {
         return messages;
     }
 
-    public List<Message> findByStudent(Student student, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusEntity statusEntity, CategoriesEntity categoriesEntity) {
+    public List<Message> findByStudent(Student student, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusesEntity statusesEntity, CategoriesEntity categoriesEntity) {
         String criteria = "student_id = " + student.getIdAsString();
-        return findByCriteria(criteria,studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusEntity, categoriesEntity);
+        return findByCriteria(criteria,studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusesEntity, categoriesEntity);
     }
 
-    public List<Message> findAllOrderByNroStars(StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusEntity statusEntity, CategoriesEntity categoriesEntity, boolean isAscending) {
-        return findByCriteria("true ORDER BY nro_stars" + (isAscending ? "" : " DESC"),studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusEntity, categoriesEntity);
+    public List<Message> findAllOrderByNroStars(StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusesEntity statusesEntity, CategoriesEntity categoriesEntity, boolean isAscending) {
+        return findByCriteria("true ORDER BY nro_stars" + (isAscending ? "" : " DESC"),studentsEntity,thesisAssessorsEntity,careersEntity, levelsEntity, studiesCentersEntity, statusesEntity, categoriesEntity);
     }
 
     public boolean add(Message message) {
@@ -58,7 +58,7 @@ public class MessagesEntity extends BaseEntity {
                 message.getCareer().getId() + ", " +
                 message.getLevel().getId() + ", " +
                 "'" + message.getDegreeTitleToGet() + "'" + ", " +
-                message.getStudyCenter().getId() + ", " +
+                message.getStudiesCenter().getId() + ", " +
                 "'" + message.getThesisTopic() + "'" + ", " +
                 "'" + message.getThesisExpositionDate() + "'" + ", " +
                 "'" + message.getType() + "'" + ", " +
@@ -74,7 +74,7 @@ public class MessagesEntity extends BaseEntity {
                 "career_id= " + message.getCareer().getId() + ", " +
                 "level_id= " + message.getLevel().getId() + ", " +
                 "degree_title_to_get= " + "'"+ message.getDegreeTitleToGet() + "'" + ", " +
-                "studies_center_id= " + message.getStudyCenter().getId() + ", " +
+                "studies_center_id= " + message.getStudiesCenter().getId() + ", " +
                 "thesis_topic= " + "'" + message.getThesisTopic() + "'" + ", " +
                 "thesis_exposition_date= " + "'" + message.getThesisExpositionDate() + "'" + ", " +
                 "type= " + "'" + message.getType() + "'" + ", " +

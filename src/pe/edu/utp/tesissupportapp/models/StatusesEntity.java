@@ -9,13 +9,13 @@ import java.util.List;
 /**
  * Created by George on 17/06/2017.
  */
-public class StatusEntity extends BaseEntity {
+public class StatusesEntity extends BaseEntity {
 
-    public StatusEntity(Connection connection){
+    public StatusesEntity(Connection connection){
         super(connection,"statuses");
 
 }
-    public StatusEntity() {super ();}
+    public StatusesEntity() {super ();}
 
     List<Status> findAll(){
         return findByCriteria("");
@@ -44,7 +44,7 @@ public class StatusEntity extends BaseEntity {
             while (resultSet.next()){
                 statuses.add((new Status())
                         .setId(resultSet.getInt("id"))
-                        .setName(resultSet.getString("sname"))
+                        .setName(resultSet.getString("name"))
                         .setDescription(resultSet.getString("description"))
 
                 );
@@ -62,26 +62,26 @@ public class StatusEntity extends BaseEntity {
 
 
     public boolean add(Status status){
-        String sql = "INSERT INTO status(id, name, description) " +
-                "VALUES(" + status.getIdAsString() + ", " +
-                status.getNameAsValue() +
+        String sql = "INSERT INTO statuses(id, name, description) " +
+                "VALUES(" +
+                status.getIdAsString() + ", " +
+                status.getNameAsValue() + ", " +
                 status.getDescriptionAsValue() + ")";
         return change(sql);
 
     }
     public boolean delete(Status status) {
-        String sql = "DELETE FROM status WHERE id = " + status.getIdAsString();
+        String sql = "DELETE FROM statuses WHERE id = " + status.getIdAsString();
         return change(sql);
     }
     public boolean delete(String name) {
-        return change("DELETE FROM status WHERE name = " +
-                "'" + name + "'");
+        return change("DELETE FROM statuses WHERE name = " + "'" + name + "'");
     }
 
     public boolean update(Status status) {
-        String sql = "UPDATE levels SET " +
+        String sql = "UPDATE statuses SET " +
                 "name = " + status.getNameAsValue() + ", " +
-                "description = " + status.getDescriptionAsValue() + ", " +
+                "description = " + status.getDescriptionAsValue() +
                 " WHERE id = " + status.getIdAsString();
         return change(sql);
     }

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /**
  * Created by USER on 16/06/2017.
  */
-public class StudyCenter {
+public class StudiesCenter {
 
     private int id;
     private String name;
@@ -17,7 +17,7 @@ public class StudyCenter {
     private String phone;
     private String photoPath;
 
-    public StudyCenter(int id, String name, String description, String street, String city, String country, String phone, String photoPath) {
+    public StudiesCenter(int id, String name, String description, String street, String city, String country, String phone, String photoPath) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -28,12 +28,9 @@ public class StudyCenter {
         this.photoPath = photoPath;
     }
 
-    public StudyCenter() {
+    public StudiesCenter() {
 
     }
-
-
-
 
     public int getId() {
         return id;
@@ -43,7 +40,7 @@ public class StudyCenter {
         return String.valueOf(getId());
     }
 
-    public StudyCenter setId(int id) {
+    public StudiesCenter setId(int id) {
         this.id = id;
         return this;
     }
@@ -56,7 +53,7 @@ public class StudyCenter {
         return "'"+getName()+"'";
     }
 
-    public StudyCenter setName(String name) {
+    public StudiesCenter setName(String name) {
         this.name = name;
         return this;
     }
@@ -67,7 +64,7 @@ public class StudyCenter {
     public String getDescriptionAsValue() {
         return "'"+getDescription()+"'";
     }
-    public StudyCenter setDescription(String description) {
+    public StudiesCenter setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -78,7 +75,7 @@ public class StudyCenter {
     public String getStreetAsValue() {
         return "'"+getStreet()+"'";
     }
-    public StudyCenter setStreet(String street) {
+    public StudiesCenter setStreet(String street) {
         this.street = street;
         return this;
     }
@@ -89,7 +86,7 @@ public class StudyCenter {
     public String getCityAsValue() {
         return "'"+getCity()+"'";
     }
-    public StudyCenter setCity(String city) {
+    public StudiesCenter setCity(String city) {
         this.city = city;
         return this;
     }
@@ -100,7 +97,7 @@ public class StudyCenter {
     public String getCountryAsValue() {
         return "'"+getCountry()+"'";
     }
-    public StudyCenter setCountry(String country) {
+    public StudiesCenter setCountry(String country) {
         this.country = country;
         return this;
     }
@@ -111,7 +108,7 @@ public class StudyCenter {
     public String getPhoneAsValue() {
         return "'"+getPhone()+"'";
     }
-    public StudyCenter setPhone(String phone) {
+    public StudiesCenter setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -122,14 +119,14 @@ public class StudyCenter {
     public String getPhotoPathAsValue() {
         return "'"+getPhotoPath()+"'";
     }
-    public StudyCenter setPhotoPath(String photoPath) {
+    public StudiesCenter setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
         return this;
     }
 
-    public static StudyCenter build(ResultSet resultSet) {
+    public static StudiesCenter build(ResultSet resultSet) {
         try {
-            return (new StudyCenter())
+            return (new StudiesCenter())
                     .setId(resultSet.getInt("id"))
                     .setName(resultSet.getString("name"))
                     .setDescription(resultSet.getString("description"))

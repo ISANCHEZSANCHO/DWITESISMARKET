@@ -18,32 +18,32 @@ public class StudiesCentersEntity extends BaseEntity {
     }
     public StudiesCentersEntity () {super ();}
 
-    List<StudyCenter> findAll(){
+    List<StudiesCenter> findAll(){
         return findByCriteria("");
     }
 
-    public StudyCenter findById (int id) {
+    public StudiesCenter findById (int id) {
 
         String criteria = "id = " +
                 String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
-    public List<StudyCenter> findAllOrderedByName(){
+    public List<StudiesCenter> findAllOrderedByName(){
         String criteria ="true ORDER BY name";
         return findByCriteria(criteria);
     }
 
-    public List<StudyCenter> findByCriteria(String criteria){
+    public List<StudiesCenter> findByCriteria(String criteria){
         String sql = getDefaultQuery() +
                 criteria == "" ? "" : " WHERE " + criteria;
-        List <StudyCenter> StudiesCenters = new ArrayList<>();
+        List <StudiesCenter> studiesCenters = new ArrayList<>();
         try{
             ResultSet resultSet = getConnection()
                     .createStatement()
                     .executeQuery(sql);
             if (resultSet==null) return null;
             while (resultSet.next()){
-                StudiesCenters.add((new StudyCenter())
+                studiesCenters.add((new StudiesCenter())
                         .setId(resultSet.getInt("id"))
                         .setName(resultSet.getString("name"))
                         .setDescription(resultSet.getString("description"))
@@ -59,7 +59,7 @@ public class StudiesCentersEntity extends BaseEntity {
 
 
             }
-            return StudiesCenters;
+            return studiesCenters;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -67,21 +67,22 @@ public class StudiesCentersEntity extends BaseEntity {
     }
 
 
-    public boolean add(StudyCenter studyCenter){
+    public boolean add(StudiesCenter studiesCenter){
         String sql = "INSERT INTO studies_centers(id, name, description, street, city, country, phone, photo_path) " +
-                "VALUES(" + studyCenter.getIdAsString() + ", " +
-                studyCenter.getNameAsValue() +
-                studyCenter.getDescriptionAsValue() +
-                studyCenter.getStreetAsValue() +
-                studyCenter.getCityAsValue() +
-                studyCenter.getCountryAsValue() +
-                studyCenter.getPhoneAsValue() +
-                studyCenter.getPhotoPathAsValue() + ")";
+                "VALUES(" +
+                studiesCenter.getIdAsString() + ", " +
+                studiesCenter.getNameAsValue() + ", " +
+                studiesCenter.getDescriptionAsValue() + ", " +
+                studiesCenter.getStreetAsValue() + ", " +
+                studiesCenter.getCityAsValue() + ", " +
+                studiesCenter.getCountryAsValue() + ", " +
+                studiesCenter.getPhoneAsValue() + ", " +
+                studiesCenter.getPhotoPathAsValue() + ")";
         return change(sql);
 
     }
-    public boolean delete(StudyCenter studyCenter) {
-        String sql = "DELETE FROM studies_centers WHERE id = " + studyCenter.getIdAsString();
+    public boolean delete(StudiesCenter studiesCenter) {
+        String sql = "DELETE FROM studies_centers WHERE id = " + studiesCenter.getIdAsString();
         return change(sql);
     }
     public boolean delete(String name) {
@@ -89,16 +90,16 @@ public class StudiesCentersEntity extends BaseEntity {
                 "'" + name + "'");
     }
 
-    public boolean update(StudyCenter studyCenter) {
+    public boolean update(StudiesCenter studiesCenter) {
         String sql = "UPDATE studies_centers SET " +
-                "name = " + studyCenter.getNameAsValue() + ", " +
-                "description = " + studyCenter.getDescriptionAsValue() + ", " +
-                "street = " + studyCenter.getStreetAsValue() + ", " +
-                "city = " + studyCenter.getCityAsValue() + ", " +
-                "country = " + studyCenter.getCountryAsValue() + ", " +
-                "phone = " + studyCenter.getPhoneAsValue() + ", " +
-                "photo_path = " + studyCenter.getPhotoPathAsValue() + ", " +
-                " WHERE id = " + studyCenter.getIdAsString();
+                "name = " + studiesCenter.getNameAsValue() + ", " +
+                "description = " + studiesCenter.getDescriptionAsValue() + ", " +
+                "street = " + studiesCenter.getStreetAsValue() + ", " +
+                "city = " + studiesCenter.getCityAsValue() + ", " +
+                "country = " + studiesCenter.getCountryAsValue() + ", " +
+                "phone = " + studiesCenter.getPhoneAsValue() + ", " +
+                "photo_path = " + studiesCenter.getPhotoPathAsValue() +
+                " WHERE id = " + studiesCenter.getIdAsString();
         return change(sql);
     }
 

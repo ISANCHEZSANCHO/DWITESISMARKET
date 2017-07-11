@@ -14,7 +14,7 @@ public class Message {
     private Career career;
     private Level level;
     private String degreeTitleToGet;
-    private StudyCenter studyCenter;
+    private StudiesCenter studiesCenter;
     private String thesisTopic;
     private Date thesisExpositionDate;
     private String type;
@@ -24,14 +24,14 @@ public class Message {
 
     }
 
-    public Message(int id, Student student, ThesisAssessor thesisAssessor, Career career, Level level, String degreeTitleToGet, StudyCenter studyCenter, String thesisTopic, Date thesisExpositionDate, String type, Status status) {
+    public Message(int id, Student student, ThesisAssessor thesisAssessor, Career career, Level level, String degreeTitleToGet, StudiesCenter studiesCenter, String thesisTopic, Date thesisExpositionDate, String type, Status status) {
         this.id = id;
         this.student = student;
         this.thesisAssessor = thesisAssessor;
         this.career = career;
         this.level = level;
         this.degreeTitleToGet = degreeTitleToGet;
-        this.studyCenter = studyCenter;
+        this.studiesCenter = studiesCenter;
         this.thesisTopic = thesisTopic;
         this.thesisExpositionDate = thesisExpositionDate;
         this.type = type;
@@ -92,12 +92,12 @@ public class Message {
         return this;
     }
 
-    public StudyCenter getStudyCenter() {
-        return studyCenter;
+    public StudiesCenter getStudiesCenter() {
+        return studiesCenter;
     }
 
-    public Message setStudyCenter(StudyCenter studyCenter) {
-        this.studyCenter = studyCenter;
+    public Message setStudiesCenter(StudiesCenter studiesCenter) {
+        this.studiesCenter = studiesCenter;
         return this;
     }
 
@@ -137,7 +137,7 @@ public class Message {
         return this;
     }
 
-    public static Message build(ResultSet rs, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusEntity statusEntity, CategoriesEntity categoriesEntity) {
+    public static Message build(ResultSet rs, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity, CareersEntity careersEntity, LevelsEntity levelsEntity, StudiesCentersEntity studiesCentersEntity, StatusesEntity statusesEntity, CategoriesEntity categoriesEntity) {
         try {
             return (new Message())
                     .setId(rs.getInt("id"))
@@ -146,11 +146,11 @@ public class Message {
                     .setCareer(careersEntity.findById(rs.getInt("career_id"),categoriesEntity))
                     .setLevel(levelsEntity.findById(rs.getInt("level_id")))
                     .setDegreeTitleToGet(rs.getString("degree_title_to_get"))
-                    .setStudyCenter(studiesCentersEntity.findById(rs.getInt("studies_center_id")))
+                    .setStudiesCenter(studiesCentersEntity.findById(rs.getInt("studies_center_id")))
                     .setThesisTopic(rs.getString("thesis_topic"))
                     .setThesisExpositionDate(rs.getDate("thesis_exposition_date"))
                     .setType(rs.getString("type"))
-                    .setStatus(statusEntity.findById(rs.getInt("status_id")));
+                    .setStatus(statusesEntity.findById(rs.getInt("status_id")));
         } catch (SQLException e) {
             e.printStackTrace();
         }

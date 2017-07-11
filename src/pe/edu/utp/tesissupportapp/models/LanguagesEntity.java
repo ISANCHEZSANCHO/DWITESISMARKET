@@ -8,22 +8,20 @@ import java.util.List;
 /**
  * Created by George on 17/06/2017.
  */
-public class LanguageEntity extends BaseEntity {
+public class LanguagesEntity extends BaseEntity {
 
-    public LanguageEntity(Connection connection){
+    public LanguagesEntity(Connection connection){
         super(connection,"languages");
 
     }
-    public LanguageEntity() {super ();}
+    public LanguagesEntity() {super ();}
 
     List<Language> findAll(){
         return findByCriteria("");
     }
 
     public Language findById (int id) {
-
-        String criteria = "id = " +
-                String.valueOf(id);
+        String criteria = "id = " + String.valueOf(id);
         return findByCriteria(criteria).get(0);
     }
         public List<Language> findAllOrderedByName(){
@@ -47,10 +45,6 @@ public class LanguageEntity extends BaseEntity {
                             .setDescription(resultSet.getString("description"))
 
                     );
-
-
-
-
                 }
                 return languages;
             } catch (SQLException e) {
@@ -62,26 +56,28 @@ public class LanguageEntity extends BaseEntity {
 
     public boolean add(Language language){
         String sql = "INSERT INTO languages(id, name, description) " +
-                "VALUES(" + language.getIdAsString() + ", " +
-                language.getNameAsValue() +
+                "VALUES(" +
+                language.getIdAsString() + ", " +
+                language.getNameAsValue() + ", " +
                 language.getDescriptionAsValue() + ")";
         return change(sql);
 
     }
+
     public boolean delete(Language language) {
         String sql = "DELETE FROM languages WHERE id = " + language.getIdAsString();
         return change(sql);
     }
+
     public boolean delete(String name) {
-        return change("DELETE FROM languages WHERE name = " +
-                "'" + name + "'");
+        return change("DELETE FROM languages WHERE name = " + "'" + name + "'");
     }
 
     public boolean update(Language language) {
         String sql = "UPDATE languages SET " +
                 "name = " + language.getNameAsValue() + ", " +
-                "description = " + language.getDescriptionAsValue() + ", " +
-                                " WHERE id = " + language.getIdAsString();
+                "description = " + language.getDescriptionAsValue() +
+                " WHERE id = " + language.getIdAsString();
         return change(sql);
     }
 
