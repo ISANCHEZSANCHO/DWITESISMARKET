@@ -84,12 +84,12 @@ public class StudentsEntity extends BaseEntity {
                 "'"+student.getDegreeDocument()+"'" + ", " +
                 "'"+student.getStreet()+"'" + ", "+
                 "'"+student.getCity()+"'" + ", " +
-                "'" + student.getCountry()+"'" + ", " + ")";
+                "'" + student.getCountry()+"'" + ")";
         return change(sql);
     }
 
     public boolean delete(Student student) {
-        String sql = "DELETE FROM students WHERE id = " + student.getIdAsString(student.getId());
+        String sql = "DELETE FROM students WHERE id = " + student.getIdAsString();
         return change(sql);
     }
 
@@ -99,20 +99,21 @@ public class StudentsEntity extends BaseEntity {
 
     public boolean update(Student student) {
         String sql = "UPDATE students SET "+
-                "id = " + student.getId() +
-                "username = " + "'" +student.getUsername() + "'" +
-                "password = " + "'" +student.getPassword() + "'" +
-                "last_name = " + "'" +student.getLastName() + "'" +
-                "first_name = " + "'" +student.getFirstName() + "'" +
-                "email = " + "'" +student.getEmail() + "'" +
-                "photo_path = " + "'" +student.getPhotoPath() + "'" +
-                "phone_number1 = " + student.getPhoneNumber1() +
-                "phone_number2 = " + student.getPhoneNumber2() +
-                "gender = " + "'" +student.getGender() + "'" +
-                "degree_document = " + "'" +student.getDegreeDocument() + "'" +
-                "street = " + "'" +student.getStreet() + "'" +
-                "city = " + "'" +student.getCity() + "'" +
-                "country = " + "'" +student.getCountry() + "'" +")";
+                "id = " + student.getId() + ", " +
+                "username = " + "'" +student.getUsername() + "'" + ", " +
+                "password = " + "'" +student.getPassword() + "'" + ", " +
+                "last_name = " + "'" +student.getLastName() + "'" + ", " +
+                "first_name = " + "'" +student.getFirstName() + "'" + ", " +
+                "email = " + "'" +student.getEmail() + "'" + ", " +
+                "photo_path = " + "'" +student.getPhotoPath() + "'" + ", " +
+                "phone_number1 = " + student.getPhoneNumber1() + ", " +
+                "phone_number2 = " + student.getPhoneNumber2() + ", " +
+                "gender = " + "'" +student.getGender() + "'" + ", " +
+                "degree_document = " + "'" +student.getDegreeDocument() + "'" + ", " +
+                "street = " + "'" +student.getStreet() + "'" + ", " +
+                "city = " + "'" +student.getCity() + "'" + ", " +
+                "country = " + "'" +student.getCountry() + "'" +
+                " WHERE id= " + student.getIdAsString();
         return change(sql);
     }
 

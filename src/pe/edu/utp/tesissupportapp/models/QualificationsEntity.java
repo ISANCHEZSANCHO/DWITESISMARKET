@@ -64,10 +64,10 @@ public class QualificationsEntity extends BaseEntity {
     public boolean update(Qualification qualification) {
         String sql = "UPDATE qualifications SET " +
                 "id = " + qualification.getId() + ", " +
-                "student_id = " + qualification.getStudent().getId() +
-                "assessor_id = " + qualification.getThesisAssessor().getId() +
-                "date = " +"'" + qualification.getDate()+"'"+
-                "nro_stars = " + qualification.getNroStars()+
+                "student_id = " + qualification.getStudent().getId() + ", " +
+                "assessor_id = " + qualification.getThesisAssessor().getId() + ", " +
+                "date = " +"'" + qualification.getDate() + "'" + ", " +
+                "nro_stars = " + qualification.getNroStars() + ", " +
                 "comment = " + "'" + qualification.getComment() + "'" +
                 " WHERE id = " + qualification.getId();
         return change(sql);
