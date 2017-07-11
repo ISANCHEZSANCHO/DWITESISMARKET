@@ -8,13 +8,13 @@ import java.util.List;
 /**
  * Created by George on 17/06/2017.
  */
-public class LanguagesEntity extends BaseEntity {
+public class LanguageEntity extends BaseEntity {
 
-    public LanguagesEntity (Connection connection){
+    public LanguageEntity(Connection connection){
         super(connection,"languages");
 
     }
-    public LanguagesEntity () {super ();}
+    public LanguageEntity() {super ();}
 
     List<Language> findAll(){
         return findByCriteria("");
