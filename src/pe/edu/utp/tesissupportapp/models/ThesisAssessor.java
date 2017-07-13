@@ -44,9 +44,7 @@ public class ThesisAssessor {
     public int getId() {
         return id;
     }
-    public String getIdAsString(int id){
-        return String.valueOf(getId());
-    }
+    public String getIdAsValue() { return "'" + getId() + "'";}
 
     public ThesisAssessor setId(int id) {
         this.id = id;

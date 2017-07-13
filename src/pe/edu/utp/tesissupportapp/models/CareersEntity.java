@@ -22,8 +22,8 @@ public class CareersEntity extends BaseEntity {
 
     public Career findById(int id, CategoriesEntity categoriesEntity) {
         try {
-            String sql = "id = " + String.valueOf(id);
-            return findByCriteria(sql, categoriesEntity).get(0);
+            String criteria = "id = " + String.valueOf(id);
+            return findByCriteria(criteria, categoriesEntity).get(0);
         } catch (Exception e) {
             e.printStackTrace();
         }
