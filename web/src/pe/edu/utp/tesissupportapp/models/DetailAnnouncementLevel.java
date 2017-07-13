@@ -8,9 +8,7 @@ import java.sql.SQLException;
  */
 public class DetailAnnouncementLevel {
 
-
-
-
+    
     private int announcement_id;
     private int level_id;
 
