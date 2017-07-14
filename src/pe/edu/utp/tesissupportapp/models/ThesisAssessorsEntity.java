@@ -91,7 +91,7 @@ public class ThesisAssessorsEntity extends BaseEntity {
     }
 
     public boolean delete(ThesisAssessor thesisAssessor) {
-        String sql = "DELETE FROM thesis_assessors WHERE id = " + thesisAssessor.getIdAsString(thesisAssessor.getId());
+        String sql = "DELETE FROM thesis_assessors WHERE id = " + thesisAssessor.getIdAsValue();
         return change(sql);
     }
 
