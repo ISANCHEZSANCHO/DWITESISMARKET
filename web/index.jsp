@@ -12,7 +12,7 @@
   <title>Tesis Market</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
   <body>
   <header>
@@ -39,5 +39,13 @@
       </div>
     </nav>
   </header>
+
+  <!-- Aqui va el jumbotrom -->
+  <section class="jumbotron">
+    <divclass="container">
+    <h2 align="center" style="color: #fff; font-size: 35px;"><strong>¡Encuentra<br>a tu acesor ideal!</strong></h2>
+    </div>
+  </section>
+
   </body>
 </html>
