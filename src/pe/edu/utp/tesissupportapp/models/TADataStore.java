@@ -6,6 +6,7 @@ import java.sql.Connection;
  */
 public class TADataStore {
     private Connection connection;
+    private AnnouncementEntity announcementEntity;
     private CareersEntity careersEntity;
     private CategoriesEntity categoriesEntity;
     private LanguagesEntity languagesEntity;
@@ -33,6 +34,16 @@ public class TADataStore {
         return this;
     }
 
+
+    public AnnouncementEntity getAnnouncementEntity(){
+
+        if(announcementEntity == null){
+
+            announcementEntity = new AnnouncementEntity(getConnection());
+        }
+
+        return announcementEntity;
+    }
     public CareersEntity getCareersEntity() {
         if(careersEntity == null){
             careersEntity = new CareersEntity(getConnection());
