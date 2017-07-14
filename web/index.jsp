@@ -15,6 +15,29 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
   <body>
-
+  <header>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toagle="collapse" data-target="#navegacion-fm">
+            <span class="sr-only">Desplegar / Ocultar Menu</span>
+            <span class="icon-bar" ></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand"><img src="img/logo.png" width="250px "></a>
+        </div>
+        <!-- Inicia Menú -->
+        <div class="collapse navbar-collapse" id="navegacion-fm">
+          <ul class="nav nav-pills pull-right">
+            <li><a href="#">Ingresar</a></li>
+            <li><a href="#">Registro</a></li>
+            <li><a href="#">Ayuda</a></li>
+            <li role="presentation" class="active"><a href="#">Dar clases particulares</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   </body>
 </html>
