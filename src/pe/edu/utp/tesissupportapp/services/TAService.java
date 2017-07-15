@@ -68,4 +68,11 @@ public class TAService {
         return getDataStore().findAllMessages();
     }
 
+
+    public List<Qualification> getQualifications(){
+
+        return getDataStore().findAllQualifications();
+    }
+
+
 }

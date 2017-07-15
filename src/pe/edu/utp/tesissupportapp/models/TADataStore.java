@@ -112,6 +112,13 @@ public class TADataStore {
         return qualificationsEntity;
     }
 
+    public List<Qualification> findAllQualifications() {
+
+        return getQualificationsEntity().findAll(getStudentsEntity(), getThesisAssessorsEntity());
+
+    }
+
+
     public StatusesEntity getStatusesEntity() {
         if(statusesEntity == null){
             statusesEntity = new StatusesEntity(getConnection());

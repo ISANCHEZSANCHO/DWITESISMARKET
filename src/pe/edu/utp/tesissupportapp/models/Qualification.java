@@ -80,7 +80,7 @@ public class Qualification {
         return this;
     }
 
-    public static Qualification build(ResultSet rs, ThesisAssessorsEntity thesisAssessorsEntity, StudentsEntity studentsEntity) {
+    public static Qualification build(ResultSet rs,  StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity) {
         try {
             return (new Qualification())
                     .setId(rs.getInt("id"))
