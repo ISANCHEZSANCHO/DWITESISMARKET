@@ -157,4 +157,14 @@ public class TADataStore {
         return getThesisAssessorsEntity().findAll();
     }
 
+    public Student findStudentById(int id) {
+        return getStudentsEntity().findById(id);
+    }
+
+    public boolean updateStudent(Student student) {
+        return getStudentsEntity().update(student);
+    }
+
+
+
 }

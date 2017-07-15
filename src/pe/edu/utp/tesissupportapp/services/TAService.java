@@ -83,4 +83,16 @@ public class TAService {
 
         return getDataStore().findAllThesis_assessors();
     }
+
+
+    public Student getStudentById(String id) {
+        return getDataStore().findStudentById(
+                Integer.parseInt(id));
+    }
+
+    public boolean updateStudent(Student student) {
+        return getDataStore().updateStudent(student);
+    }
+
+
 }
