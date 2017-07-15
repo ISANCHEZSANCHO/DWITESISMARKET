@@ -1,5 +1,6 @@
 package pe.edu.utp.tesissupportapp.models;
 import java.sql.Connection;
+import java.util.List;
 
 /**
  * Created by KEVIN on 11/07/2017.
@@ -43,7 +44,16 @@ public class TADataStore {
         }
 
         return announcementEntity;
+
     }
+
+    public List<Announcement> findAllAnnouncements() {
+        return getAnnouncementEntity().findAll(getThesisAssessorsEntity());
+    }
+
+
+
+
     public CareersEntity getCareersEntity() {
         if(careersEntity == null){
             careersEntity = new CareersEntity(getConnection());
@@ -113,7 +123,6 @@ public class TADataStore {
         }
         return thesisAssessorsEntity;
     }
-
 
 
 

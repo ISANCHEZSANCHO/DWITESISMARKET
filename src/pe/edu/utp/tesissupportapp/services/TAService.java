@@ -1,4 +1,5 @@
 package pe.edu.utp.tesissupportapp.services;
+import pe.edu.utp.tesissupportapp.models.Announcement;
 import pe.edu.utp.tesissupportapp.models.TADataStore;
 
 import javax.naming.InitialContext;
@@ -6,6 +7,7 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by KEVIN on 11/07/2017.
@@ -35,7 +37,9 @@ public class TAService {
         }
     }
 
-
+    public List<Announcement> getAnnouncement(){
+        return getDataStore().findAllAnnouncements();
+    }
     private Connection getConnection() {
         return connection;
     }
@@ -46,7 +50,6 @@ public class TAService {
         }
         return dataStore;
     }
-
 
 
 
