@@ -74,6 +74,11 @@ public class TADataStore {
         return categoriesEntity;
     }
 
+    public List<Category> findAllCategories() {
+
+        return getCategoriesEntity().findAll();
+    }
+
     public LanguagesEntity getLanguagesEntity() {
         if(languagesEntity == null){
             languagesEntity = new LanguagesEntity(getConnection());
@@ -93,6 +98,11 @@ public class TADataStore {
             messagesEntity = new MessagesEntity(getConnection());
         }
         return messagesEntity;
+    }
+
+    public List<Message> findAllMessages() {
+
+        return getMessagesEntity().findAll(getStudentsEntity(),getThesisAssessorsEntity(),getCareersEntity(),getLevelsEntity(),getStudiesCentersEntity(),getStatusesEntity(),getCategoriesEntity());
     }
 
     public QualificationsEntity getQualificationsEntity() {
