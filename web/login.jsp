@@ -23,7 +23,7 @@
             <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
             <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar</button>
         </form><!-- /form -->
-         <p>¿Todavía no eres miembro? <a href="#" class="form-control" >
+         <p>¿Todavía no eres miembro? <a href="registro.jsp" class="form-control" >
             Registrate
        </a></p>
         <p><a href="#" class="forgot-password" >
