@@ -152,6 +152,9 @@ public class TADataStore {
         return thesisAssessorsEntity;
     }
 
+    public List<ThesisAssessor> findAllThesis_assessors() {
 
+        return getThesisAssessorsEntity().findAll();
+    }
 
 }

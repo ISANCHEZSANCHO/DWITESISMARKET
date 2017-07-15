@@ -78,4 +78,9 @@ public class TAService {
 
         return getDataStore().findAllStudents();
     }
+
+    public List<ThesisAssessor> getThesis_assessors(){
+
+        return getDataStore().findAllThesis_assessors();
+    }
 }
