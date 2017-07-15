@@ -133,6 +133,11 @@ public class TADataStore {
         return studentsEntity;
     }
 
+    public List<Student> findAllStudents() {
+
+        return getStudentsEntity().findAll();
+    }
+
     public StudiesCentersEntity getStudiesCentersEntity() {
         if(studiesCentersEntity == null){
             studiesCentersEntity = new StudiesCentersEntity(getConnection());

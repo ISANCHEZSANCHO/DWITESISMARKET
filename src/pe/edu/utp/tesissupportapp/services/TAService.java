@@ -74,5 +74,8 @@ public class TAService {
         return getDataStore().findAllQualifications();
     }
 
+    public List<Student> getStudents(){
 
+        return getDataStore().findAllStudents();
+    }
 }
