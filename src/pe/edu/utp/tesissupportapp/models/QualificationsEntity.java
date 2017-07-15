@@ -18,22 +18,22 @@ public class QualificationsEntity extends BaseEntity {
         super();
     }
 
-    public List<Qualification> findAll(ThesisAssessorsEntity thesisAssessorsEntity, StudentsEntity studentsEntity) {
-        return findByCriteria("", thesisAssessorsEntity,studentsEntity);
+    public List<Qualification> findAll(StudentsEntity studentsEntity,ThesisAssessorsEntity thesisAssessorsEntity) {
+        return findByCriteria("",studentsEntity,thesisAssessorsEntity);
     }
 
-    public Qualification findById(String id, ThesisAssessorsEntity thesisAssessorsEntity, StudentsEntity studentsEntity) {
+    public Qualification findById(String id,  StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity) {
         String criteria = "id = " + "'" + id + "'";
-        return findByCriteria(criteria, thesisAssessorsEntity,studentsEntity).get(0);
+        return findByCriteria(criteria,studentsEntity,thesisAssessorsEntity).get(0);
     }
 
-    public List<Qualification> findByCriteria(String criteria, ThesisAssessorsEntity thesisAssessorsEntity, StudentsEntity studentsEntity) {
+    public List<Qualification> findByCriteria(String criteria, StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity) {
         String sql = getDefaultQuery() + (criteria.isEmpty() ? "" : " WHERE " + criteria);
         List<Qualification> qualifications = new ArrayList<>();
         try {
             ResultSet rs = getConnection().createStatement().executeQuery(sql);
             if(rs == null) return null;
-            while(rs.next()) qualifications.add(Qualification.build(rs,thesisAssessorsEntity,studentsEntity));
+            while(rs.next()) qualifications.add(Qualification.build(rs,studentsEntity,thesisAssessorsEntity));
             return qualifications;
         } catch(SQLException e) {
             e.printStackTrace();
@@ -41,13 +41,13 @@ public class QualificationsEntity extends BaseEntity {
         return qualifications;
     }
 
-    public List<Qualification> findByStudent(Student student, ThesisAssessorsEntity thesisAssessorsEntity, StudentsEntity studentsEntity) {
+    public List<Qualification> findByStudent(Student student,  StudentsEntity studentsEntity, ThesisAssessorsEntity thesisAssessorsEntity) {
         String criteria = "student_id = " + student.getIdAsString();
-        return findByCriteria(criteria, thesisAssessorsEntity,studentsEntity);
+        return findByCriteria(criteria,studentsEntity,thesisAssessorsEntity);
     }
 
-    public List<Qualification> findAllOrderByNroStars(ThesisAssessorsEntity thesisAssessorsEntity, StudentsEntity studentsEntity, boolean isAscending) {
-        return findByCriteria("true ORDER BY nro_stars" + (isAscending ? "" : " DESC"), thesisAssessorsEntity, studentsEntity );
+    public List<Qualification> findAllOrderByNroStars( StudentsEntity studentsEntity,ThesisAssessorsEntity thesisAssessorsEntity, boolean isAscending) {
+        return findByCriteria("true ORDER BY nro_stars" + (isAscending ? "" : " DESC"), studentsEntity, thesisAssessorsEntity );
     }
 
     public boolean add(Qualification qualification) {

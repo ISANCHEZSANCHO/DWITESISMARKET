@@ -7,12 +7,12 @@ import java.sql.SQLException;
  */
     public class Student {
             private int id;
-            private String username;
+            private String name;
             private String password;
             private String lastName;
             private String firstName;
             private String email;
-            private String photoPath;
+            private String userPhoto;
             private int phoneNumber1;
             private int phoneNumber2;
             private String gender;
@@ -24,14 +24,14 @@ import java.sql.SQLException;
     public Student() {
     }
 
-    public Student(int id, String username, String password, String lastName, String firstName, String email, String photoPath, int phoneNumber1, int phoneNumber2, String gender, String degreeDocument, String street, String city, String country) {
+    public Student(int id, String name, String password, String lastName, String firstName, String email, String userPhoto, int phoneNumber1, int phoneNumber2, String gender, String degreeDocument, String street, String city, String country) {
         this.id = id;
-        this.username = username;
+        this.name = name;
         this.password = password;
         this.lastName = lastName;
         this.firstName = firstName;
         this.email = email;
-        this.photoPath = photoPath;
+        this.userPhoto = userPhoto;
         this.phoneNumber1 = phoneNumber1;
         this.phoneNumber2 = phoneNumber2;
         this.gender = gender;
@@ -40,6 +40,7 @@ import java.sql.SQLException;
         this.city = city;
         this.country = country;
     }
+
 
     public int getId() {
         return id;
@@ -54,12 +55,12 @@ import java.sql.SQLException;
         return this;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public Student setUsername(String username) {
-        this.username = username;
+    public Student setName(String name) {
+        this.name = name;
         return this;
     }
 
@@ -99,12 +100,12 @@ import java.sql.SQLException;
         return this;
     }
 
-    public String getPhotoPath() {
-        return photoPath;
+    public String getUserPhoto() {
+        return userPhoto;
     }
 
-    public Student setPhotoPath(String photoPath) {
-        this.photoPath = photoPath;
+    public Student setUserPhoto(String userPhoto) {
+        this.userPhoto = userPhoto;
         return this;
     }
 
@@ -175,12 +176,12 @@ import java.sql.SQLException;
         try {
             return (new Student())
                     .setId(resultSet.getInt("id"))
-                    .setUsername(resultSet.getString("username"))
+                    .setName(resultSet.getString("name"))
                     .setPassword(resultSet.getString("password"))
                     .setLastName(resultSet.getString("last_name"))
                     .setFirstName(resultSet.getString("first_name"))
                     .setEmail(resultSet.getString("email"))
-                    .setPhotoPath(resultSet.getString("photo_path"))
+                    .setUserPhoto(resultSet.getString("user_photo"))
                     .setPhoneNumber1(resultSet.getInt("phone_number1"))
                     .setPhoneNumber2(resultSet.getInt("phone_number2"))
                     .setGender(resultSet.getString("gender"))

@@ -1,5 +1,6 @@
 package pe.edu.utp.tesissupportapp.models;
 import java.sql.Connection;
+import java.util.List;
 
 /**
  * Created by KEVIN on 11/07/2017.
@@ -43,7 +44,16 @@ public class TADataStore {
         }
 
         return announcementEntity;
+
     }
+
+    public List<Announcement> findAllAnnouncements() {
+        return getAnnouncementEntity().findAll(getThesisAssessorsEntity());
+    }
+
+
+
+
     public CareersEntity getCareersEntity() {
         if(careersEntity == null){
             careersEntity = new CareersEntity(getConnection());
@@ -51,11 +61,22 @@ public class TADataStore {
         return careersEntity;
     }
 
+    public List<Career> findAllCareers() {
+
+        return getCareersEntity().findAll(getCategoriesEntity());
+    }
+
+
     public CategoriesEntity getCategoriesEntity() {
         if(categoriesEntity == null){
             categoriesEntity = new CategoriesEntity(getConnection());
         }
         return categoriesEntity;
+    }
+
+    public List<Category> findAllCategories() {
+
+        return getCategoriesEntity().findAll();
     }
 
     public LanguagesEntity getLanguagesEntity() {
@@ -79,12 +100,24 @@ public class TADataStore {
         return messagesEntity;
     }
 
+    public List<Message> findAllMessages() {
+
+        return getMessagesEntity().findAll(getStudentsEntity(),getThesisAssessorsEntity(),getCareersEntity(),getLevelsEntity(),getStudiesCentersEntity(),getStatusesEntity(),getCategoriesEntity());
+    }
+
     public QualificationsEntity getQualificationsEntity() {
         if(qualificationsEntity == null){
             qualificationsEntity = new QualificationsEntity(getConnection());
         }
         return qualificationsEntity;
     }
+
+    public List<Qualification> findAllQualifications() {
+
+        return getQualificationsEntity().findAll(getStudentsEntity(), getThesisAssessorsEntity());
+
+    }
+
 
     public StatusesEntity getStatusesEntity() {
         if(statusesEntity == null){
@@ -98,6 +131,11 @@ public class TADataStore {
             studentsEntity = new StudentsEntity(getConnection());
         }
         return studentsEntity;
+    }
+
+    public List<Student> findAllStudents() {
+
+        return getStudentsEntity().findAll();
     }
 
     public StudiesCentersEntity getStudiesCentersEntity() {
@@ -114,6 +152,18 @@ public class TADataStore {
         return thesisAssessorsEntity;
     }
 
+    public List<ThesisAssessor> findAllThesis_assessors() {
+
+        return getThesisAssessorsEntity().findAll();
+    }
+
+    public Student findStudentById(int id) {
+        return getStudentsEntity().findById(id);
+    }
+
+    public boolean updateStudent(Student student) {
+        return getStudentsEntity().update(student);
+    }
 
 
 

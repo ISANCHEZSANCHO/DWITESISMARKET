@@ -47,12 +47,12 @@ public class StudentsEntity extends BaseEntity {
             while(resultSet.next()) {
                 students.add((new Student())
                         .setId(resultSet.getInt("id"))
-                        .setUsername(resultSet.getString("username"))
+                        .setName(resultSet.getString("name"))
                         .setPassword(resultSet.getString("password"))
                         .setLastName(resultSet.getString("last_name"))
                         .setFirstName(resultSet.getString("first_name"))
                         .setEmail(resultSet.getString("email"))
-                        .setPhotoPath(resultSet.getString("photo_path"))
+                        .setUserPhoto(resultSet.getString("user_photo"))
                         .setPhoneNumber1(resultSet.getInt("phone_number1"))
                         .setPhoneNumber2(resultSet.getInt("phone_number2"))
                         .setGender(resultSet.getString("gender"))
@@ -69,15 +69,15 @@ public class StudentsEntity extends BaseEntity {
     }
 
     public boolean add(Student student) {
-        String sql = "INSERT INTO thesis_assessors(id, username, password, last_name, first_name, email, photo_path, phone_number1, phone_number1, gender, degree_document, street, city, country) " +
+        String sql = "INSERT INTO thesis_assessors(id, name, password, last_name, first_name, email, user_photo, phone_number1, phone_number1, gender, degree_document, street, city, country) " +
                 "VALUES(" +
                 student.getId() + ", " +
-                "'"+student.getUsername()+"'" + ", " +
+                "'"+student.getName()+"'" + ", " +
                 "'"+student.getPassword()+"'" + ", " +
                 "'"+student.getLastName()+"'" + ", " +
                 "'"+student.getFirstName()+"'" + ", " +
                 "'"+student.getEmail()+"'" + ", " +
-                "'"+student.getPhotoPath()+"'" + ", " +
+                "'"+student.getUserPhoto()+"'" + ", " +
                 student.getPhoneNumber1() + ", " +
                 student.getPhoneNumber2() + ", " +
                 "'"+student.getGender()+"'" + ", " +
@@ -94,18 +94,18 @@ public class StudentsEntity extends BaseEntity {
     }
 
     public boolean delete(String name) {
-        return change("DELETE FROM students WHERE username = " + "'" + name + "'");
+        return change("DELETE FROM students WHERE name = " + "'" + name + "'");
     }
 
     public boolean update(Student student) {
         String sql = "UPDATE students SET "+
                 "id = " + student.getId() + ", " +
-                "username = " + "'" +student.getUsername() + "'" + ", " +
+                "name = " + "'" +student.getName() + "'" + ", " +
                 "password = " + "'" +student.getPassword() + "'" + ", " +
                 "last_name = " + "'" +student.getLastName() + "'" + ", " +
                 "first_name = " + "'" +student.getFirstName() + "'" + ", " +
                 "email = " + "'" +student.getEmail() + "'" + ", " +
-                "photo_path = " + "'" +student.getPhotoPath() + "'" + ", " +
+                "user_photo = " + "'" +student.getUserPhoto() + "'" + ", " +
                 "phone_number1 = " + student.getPhoneNumber1() + ", " +
                 "phone_number2 = " + student.getPhoneNumber2() + ", " +
                 "gender = " + "'" +student.getGender() + "'" + ", " +

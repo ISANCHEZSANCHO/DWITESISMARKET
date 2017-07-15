@@ -31,6 +31,8 @@ public class AnnouncementEntity extends BaseEntity{
 
     }
 
+
+
     public List<Announcement> findByCriteria(
             String criteria,
             ThesisAssessorsEntity thesisAssessorsEntity) {
@@ -50,7 +52,7 @@ public class AnnouncementEntity extends BaseEntity{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return announcements;
+        return null;
     }
 
     public boolean add(Announcement announcement) {
@@ -94,6 +96,7 @@ public class AnnouncementEntity extends BaseEntity{
                 "'" + id + "'";
         return change(sql);
     }
+
 
 
 }
