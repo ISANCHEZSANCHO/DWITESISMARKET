@@ -61,6 +61,12 @@ public class TADataStore {
         return careersEntity;
     }
 
+    public List<Career> findAllCareers() {
+
+        return getCareersEntity().findAll(getCategoriesEntity());
+    }
+
+
     public CategoriesEntity getCategoriesEntity() {
         if(categoriesEntity == null){
             categoriesEntity = new CategoriesEntity(getConnection());

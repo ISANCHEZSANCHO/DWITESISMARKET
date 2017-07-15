@@ -1,5 +1,7 @@
 package pe.edu.utp.tesissupportapp.services;
 import pe.edu.utp.tesissupportapp.models.Announcement;
+import pe.edu.utp.tesissupportapp.models.Career;
+import pe.edu.utp.tesissupportapp.models.CareersEntity;
 import pe.edu.utp.tesissupportapp.models.TADataStore;
 
 import javax.naming.InitialContext;
@@ -37,9 +39,7 @@ public class TAService {
         }
     }
 
-    public List<Announcement> getAnnouncement(){
-        return getDataStore().findAllAnnouncements();
-    }
+
     private Connection getConnection() {
         return connection;
     }
@@ -52,6 +52,13 @@ public class TAService {
     }
 
 
+    public List<Announcement> getAnnouncements(){
+        return getDataStore().findAllAnnouncements();
+    }
 
+    public List<Career> getCareers(){
+
+        return getDataStore().findAllCareers();
+    }
 
 }
