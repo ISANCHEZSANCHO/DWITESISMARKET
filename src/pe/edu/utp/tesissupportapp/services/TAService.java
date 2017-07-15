@@ -103,5 +103,8 @@ public class TAService {
         return getDataStore().updateThesisAssessor(thesisAssessor);
     }
 
+    public boolean getThesisAssessorByEmail(String email,String password){
+        return getDataStore().findThesisAssessorsByEmail(email,password);
+    }
 
 }

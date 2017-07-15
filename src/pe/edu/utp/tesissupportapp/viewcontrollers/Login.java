@@ -1,5 +1,8 @@
 package pe.edu.utp.tesissupportapp.viewcontrollers;
 
+import pe.edu.utp.tesissupportapp.services.TAService;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,11 +15,23 @@ import java.io.IOException;
  */
 @WebServlet(name = "Login")
 public class Login extends HttpServlet {
+
+    TAService service =new TAService();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        if (service.getThesisAssessorByEmail(email, password) == true) {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index2.jsp");
+            dispatcher.forward(request, response);
+        } else {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+            dispatcher.include(request, response);
+        }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-}
+
+

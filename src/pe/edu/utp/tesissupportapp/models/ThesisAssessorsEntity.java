@@ -1,5 +1,6 @@
 package pe.edu.utp.tesissupportapp.models;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -118,4 +119,23 @@ public class ThesisAssessorsEntity extends BaseEntity {
         return change(sql);
     }
 
+    public boolean findByEmailPassword(String email, String password) {
+
+        boolean st =false;
+//            String sql=getDefaultQuery()+" where email=? and password=? ";
+        try{
+//                Connection con= DriverManager.getConnection
+//                        ("jdbc:mysql://localhost:3306/dbsoccer","root","alumno");
+            PreparedStatement ps =getConnection().prepareStatement
+                    (getDefaultQuery()+ " where email=? and password=?" );
+            ps.setString(1, email);
+            ps.setString(2, password);
+            ResultSet rs =ps.executeQuery();
+            st = rs.next();
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return st;
+    }
 }
