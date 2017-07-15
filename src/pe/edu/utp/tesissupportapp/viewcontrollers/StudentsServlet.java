@@ -33,7 +33,6 @@ public class StudentsServlet extends HttpServlet {
                 student.setPassword(request.getParameter("password"));
                 student.setLastName(request.getParameter("last_name"));
                 student.setFirstName(request.getParameter("first_name"));
-                student.setLastName(request.getParameter("last_name"));
                 student.setEmail(request.getParameter("email"));
                 student.setUserPhoto(request.getParameter("user_photo"));
                 student.setPhoneNumber1(Integer.parseInt(request.getParameter("phone_number1")));
@@ -41,7 +40,7 @@ public class StudentsServlet extends HttpServlet {
                 student.setGender(request.getParameter("gender"));
                 student.setDegreeDocument(request.getParameter("document_degree"));
                 student.setStreet(request.getParameter("street"));
-                student.setCity(request.getParameter("street"));
+                student.setCity(request.getParameter("city"));
                 student.setCountry(request.getParameter("country"));
 
                 String message = service.updateStudent(student) ?
@@ -69,8 +68,17 @@ public class StudentsServlet extends HttpServlet {
                 Student student = service.getStudentById(request.getParameter("id"));
                 request.setAttribute("name", student);
                 request.setAttribute("password", student);
-                request.setAttribute("name", student);
-
+                request.setAttribute("last_name", student);
+                request.setAttribute("first_name", student);
+                request.setAttribute("email", student);
+                request.setAttribute("user_photo", student);
+                request.setAttribute("phone_number1", student);
+                request.setAttribute("phone_number2", student);
+                request.setAttribute("gender", student);
+                request.setAttribute("document_degree", student);
+                request.setAttribute("street", student);
+                request.setAttribute("city", student);
+                request.setAttribute("country", student);
                 request.setAttribute("action", "edit");
                 actionUri = STUDENTS_EDIT_URI;
                 break;

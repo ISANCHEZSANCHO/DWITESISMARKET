@@ -94,5 +94,14 @@ public class TAService {
         return getDataStore().updateStudent(student);
     }
 
+    public ThesisAssessor getThesisAssessorById(String id) {
+        return getDataStore().findThesisAssessorById(
+                Integer.parseInt(id));
+    }
+
+    public boolean updateThesisAssessor(ThesisAssessor thesisAssessor) {
+        return getDataStore().updateThesisAssessor(thesisAssessor);
+    }
+
 
 }

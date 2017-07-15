@@ -166,5 +166,12 @@ public class TADataStore {
     }
 
 
+    public boolean updateThesisAssessor(ThesisAssessor thesisAssessor) {
+        
+        return getThesisAssessorsEntity().update(thesisAssessor);
+    }
 
+    public ThesisAssessor findThesisAssessorById(int id) {
+        return getThesisAssessorsEntity().findById(id);
+    }
 }
