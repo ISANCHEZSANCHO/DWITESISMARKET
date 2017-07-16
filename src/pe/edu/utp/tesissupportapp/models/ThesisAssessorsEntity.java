@@ -46,8 +46,8 @@ public class ThesisAssessorsEntity extends BaseEntity {
         List<ThesisAssessor> thesisAssessors = new ArrayList<>();
         try {
             ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
-            if(resultSet == null) return null;
-            while(resultSet.next()) {
+            if (resultSet == null) return null;
+            while (resultSet.next()) {
                 thesisAssessors.add((new ThesisAssessor())
                         .setId(resultSet.getInt("id"))
                         .setUsername(resultSet.getString("username"))
@@ -75,19 +75,19 @@ public class ThesisAssessorsEntity extends BaseEntity {
         String sql = "INSERT INTO thesis_assessors(id, username, password, last_name, first_name, email, photo_path, phone_number, gender, degree_document, country, city, street, cv_path) " +
                 "VALUES(" +
                 thesisAssessor.getId() + ", " +
-                "'"+thesisAssessor.getUsername()+"'" + ", " +
-                "'"+thesisAssessor.getPassword()+"'" + ", " +
-                "'"+thesisAssessor.getLastName()+"'" + ", " +
-                "'"+thesisAssessor.getFirstName()+"'" + ", " +
-                "'"+thesisAssessor.getEmail()+"'" + ", " +
-                "'"+thesisAssessor.getPhotoPath()+"'" + ", " +
+                "'" + thesisAssessor.getUsername() + "'" + ", " +
+                "'" + thesisAssessor.getPassword() + "'" + ", " +
+                "'" + thesisAssessor.getLastName() + "'" + ", " +
+                "'" + thesisAssessor.getFirstName() + "'" + ", " +
+                "'" + thesisAssessor.getEmail() + "'" + ", " +
+                "'" + thesisAssessor.getPhotoPath() + "'" + ", " +
                 thesisAssessor.getPhoneNumberAsString() + ", " +
-                "'"+thesisAssessor.getGender()+"'" + ", " +
-                "'"+thesisAssessor.getDegreeDocument()+"'" + ", " +
-                "'"+thesisAssessor.getCountry()+"'" + ", " +
-                "'"+thesisAssessor.getCity()+"'" + ", " +
-                "'"+thesisAssessor.getStreet()+"'" + ", " +
-                "'"+thesisAssessor.getCvPath()+"'"+")";
+                "'" + thesisAssessor.getGender() + "'" + ", " +
+                "'" + thesisAssessor.getDegreeDocument() + "'" + ", " +
+                "'" + thesisAssessor.getCountry() + "'" + ", " +
+                "'" + thesisAssessor.getCity() + "'" + ", " +
+                "'" + thesisAssessor.getStreet() + "'" + ", " +
+                "'" + thesisAssessor.getCvPath() + "'" + ")";
         return change(sql);
     }
 
@@ -101,41 +101,23 @@ public class ThesisAssessorsEntity extends BaseEntity {
     }
 
     public boolean update(ThesisAssessor thesisAssessor) {
-        String sql = "UPDATE thesis_assessors SET "+
+        String sql = "UPDATE thesis_assessors SET " +
                 "id = " + thesisAssessor.getId() +
-                "username = " + "'" +thesisAssessor.getUsername() + "'" +
-                "password = " + "'" +thesisAssessor.getPassword() + "'" +
-                "last_name = " + "'" +thesisAssessor.getLastName() + "'" +
-                "first_name = " + "'" +thesisAssessor.getFirstName() + "'" +
-                "email = " + "'" +thesisAssessor.getEmail() + "'" +
-                "photo_path = " + "'" +thesisAssessor.getPhotoPath() + "'" +
+                "username = " + "'" + thesisAssessor.getUsername() + "'" +
+                "password = " + "'" + thesisAssessor.getPassword() + "'" +
+                "last_name = " + "'" + thesisAssessor.getLastName() + "'" +
+                "first_name = " + "'" + thesisAssessor.getFirstName() + "'" +
+                "email = " + "'" + thesisAssessor.getEmail() + "'" +
+                "photo_path = " + "'" + thesisAssessor.getPhotoPath() + "'" +
                 "phone_number = " + thesisAssessor.getPhoneNumber() +
-                "gender = " + "'" +thesisAssessor.getGender() + "'" +
-                "degree_document = " + "'" +thesisAssessor.getDegreeDocument() + "'" +
-                "country = " + "'" +thesisAssessor.getCountry() + "'" +
-                "city = " + "'" +thesisAssessor.getCity() + "'" +
-                "street = " + "'" +thesisAssessor.getStreet() + "'" +
-                "cv_path = " + "'" +thesisAssessor.getCvPath() + "'" +")";
+                "gender = " + "'" + thesisAssessor.getGender() + "'" +
+                "degree_document = " + "'" + thesisAssessor.getDegreeDocument() + "'" +
+                "country = " + "'" + thesisAssessor.getCountry() + "'" +
+                "city = " + "'" + thesisAssessor.getCity() + "'" +
+                "street = " + "'" + thesisAssessor.getStreet() + "'" +
+                "cv_path = " + "'" + thesisAssessor.getCvPath() + "'" + ")";
         return change(sql);
     }
 
-    public boolean findByEmailPassword(String email, String password) {
-
-        boolean st =false;
-//            String sql=getDefaultQuery()+" where email=? and password=? ";
-        try{
-//                Connection con= DriverManager.getConnection
-//                        ("jdbc:mysql://localhost:3306/dbsoccer","root","alumno");
-            PreparedStatement ps =getConnection().prepareStatement
-                    (getDefaultQuery()+ " where email=? and password=?" );
-            ps.setString(1, email);
-            ps.setString(2, password);
-            ResultSet rs =ps.executeQuery();
-            st = rs.next();
-        }catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        return st;
     }
-}
+

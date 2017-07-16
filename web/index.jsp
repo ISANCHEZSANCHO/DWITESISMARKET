@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navegacion-fm">
           <ul class="nav nav-pills pull-right">
             <li><a href="login.jsp">Ingresar</a></li>
-            <li><a href="#">Registro</a></li>
+            <li><a href="registro.jsp">Registro</a></li>
             <li><a href="#">Ayuda</a></li>
             <li role="presentation" class="active"><a href="#">Dar clases particulares</a></li>
           </ul>

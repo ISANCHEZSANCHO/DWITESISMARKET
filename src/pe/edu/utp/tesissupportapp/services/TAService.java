@@ -14,6 +14,7 @@ import java.util.List;
 public class TAService {
     private Connection connection;
     private TADataStore dataStore;
+    private ThesisAssessorsEntity thesisAssessorsEntity;
 
     public TAService(InitialContext ctx) {
         try {
@@ -103,8 +104,7 @@ public class TAService {
         return getDataStore().updateThesisAssessor(thesisAssessor);
     }
 
-    public boolean getThesisAssessorByEmail(String email,String password){
-        return getDataStore().findThesisAssessorsByEmail(email,password);
-    }
 
-}
+
+
+    }

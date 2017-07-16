@@ -36,12 +36,13 @@ public class ThesisAssessorsServlet extends HttpServlet {
                 thesisAssessor.setFirstName(request.getParameter("first_name"));
                 thesisAssessor.setEmail(request.getParameter("email"));
                 thesisAssessor.setPhotoPath(request.getParameter("photo_path"));
-                thesisAssessor.setPhoneNumber(Integer.parseInt(request.getParameter("phone_number1")));
+                thesisAssessor.setPhoneNumber(Integer.parseInt(request.getParameter("phone_number")));
                 thesisAssessor.setGender(request.getParameter("gender"));
-                thesisAssessor.setDegreeDocument(request.getParameter("document_degree"));
-                thesisAssessor.setStreet(request.getParameter("street"));
+                thesisAssessor.setDegreeDocument(request.getParameter("degree_document"));
+                thesisAssessor.setStreet(request.getParameter("country"));
                 thesisAssessor.setCity(request.getParameter("city"));
-                thesisAssessor.setCountry(request.getParameter("country"));
+                thesisAssessor.setCountry(request.getParameter("street"));
+                thesisAssessor.setCountry(request.getParameter("cv_path"));
 
                 String message = service.updateThesisAssessor(thesisAssessor) ?
                         "Update success" :

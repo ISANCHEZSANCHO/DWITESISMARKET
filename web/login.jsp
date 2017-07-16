@@ -21,7 +21,7 @@
             <span id="reauth-email" class="reauth-email"></span>
             <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
             <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar</button>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" a href="Profile.jsp">Ingresar</button>
         </form><!-- /form -->
          <p>¿Todavía no eres miembro? <a href="registro.jsp" class="form-control" >
             Registrate
