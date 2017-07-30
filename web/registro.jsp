@@ -28,7 +28,7 @@
     <div class="row main">
         <div class="panel-heading">
             <div class="panel-title text-center">
-                <h1 class="title">Tesis Market</h1>
+                <h1 class="title"><img src="img/logo.png" width="250px"></h1>
                 <hr />
             </div>
         </div>

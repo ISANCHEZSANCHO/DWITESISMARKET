@@ -13,6 +13,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/buscar.css">
 </head>
   <body>
   <header>
@@ -43,9 +44,39 @@
   <!-- Aqui va el jumbotrom -->
   <section class="jumbotron">
     <div class="container">
-    <h2 align="center" style="color: #fff; font-size: 35px;"><strong>¡Encuentra<br>a tu acesor ideal!</strong></h2>
+    <h2 align="center" style="color: #fff; font-size: 35px;"><strong>¡Encuentra<br>a tu Asesor ideal!</strong></h2>
     </div>
+
+      <div class="container">
+          <div class="row">
+              <div class="input-group col-md-offset-3 col-md-5">
+                  <input type="text" class="form-control input-lg" placeholder="Presencial, por Web Cam o en grupo" />
+
+                  <span class="input-group-btn " >
+<span class="col-md-offset-12 " >
+                      <span class="col-md-offset-12"><input type="text" class="form-control input-lg" placeholder="¿Especialidad?" />
+
+                 <button class="btn btn-info btn-lg " type="button">
+                     <i class="glyphicon glyphicon-search"></i>
+                        </button>
+</>
+
+                      </span>
+</span>
+
+
+              </div>
+
+
+
+
+              </div>
+              </div>
+
+
   </section>
+
+
 
   <!-- Aqui van los pasos -->
   <div style="background:#0078d1;">
