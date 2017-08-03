@@ -32,5 +32,7 @@
         </a></p>
     </div><!-- /card-container -->
 </div><!
+
+<jsp:include page="Footer.jsp"/>
 </body>
 </html>

@@ -75,28 +75,29 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="confirm" class="cols-sm-2 control-label">Confirmar contraseña</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group ">
-                    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
-                </div>
-                <div class="login-register">
-                    <a href="login.jsp">Ingresar</a>
-                </div>
-            </form>
+<%--<div class="form-group">
+    <label for="confirm" class="cols-sm-2 control-label">Confirmar contraseña</label>
+    <div class="cols-sm-10">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+            <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
         </div>
     </div>
+</div>--%>
+
+<div class="form-group ">
+    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+</div>
+<div class="login-register">
+    <a href="login.jsp">Ingresar</a>
+</div>
+</form>
+</div>
+</div>
 </div>
 
-<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script><hr />
 
+<jsp:include page="Footer.jsp"/>
 </body>
 </html>

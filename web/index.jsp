@@ -161,17 +161,19 @@
               </div>
 
               <!-- contenedor slide -->
-              <a href="#carousel-1" class="left carousel-control" role="button" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                  <span class="sr-only">Anterior</span>
-              </a>
-              <a href="#carousel-1" class="right carousel-control" role="button" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                  <span class="sr-only">Siguiente</span>
-              </a>
-          </div>
+<%--
+ <a href="#carousel-1" class="left carousel-control" role="button" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+     <span class="sr-only">Anterior</span>
+ </a>
+ <a href="#carousel-1" class="right carousel-control" role="button" data-slide="prev">
+     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+     <span class="sr-only">Siguiente</span>
+ </a>--%>
+</div>
 
-      </div>
-  </div>
-  </body>
+</div>
+</div>
+<jsp:include page="Footer.jsp"/>
+</body>
 </html>
