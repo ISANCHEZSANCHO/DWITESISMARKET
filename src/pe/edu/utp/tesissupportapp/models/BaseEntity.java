@@ -57,5 +57,9 @@ public BaseEntity(){
         return false;
     }
 
+    /*public Connection closesConnection(){
+        connection= null;
+        return  connection;
+    }*/
 
 }

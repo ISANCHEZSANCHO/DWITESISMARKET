@@ -172,6 +172,8 @@ public class ThesisAssessor {
         return this;
     }
 
+
+
     public static ThesisAssessor build(ResultSet resultSet) {
         try {
             return (new ThesisAssessor())
@@ -195,7 +197,5 @@ public class ThesisAssessor {
         }
         return null;
     }
-
-
 
 }

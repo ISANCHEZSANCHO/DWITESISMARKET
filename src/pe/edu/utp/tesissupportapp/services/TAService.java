@@ -15,6 +15,7 @@ public class TAService {
     private Connection connection;
     private TADataStore dataStore;
     private ThesisAssessorsEntity thesisAssessorsEntity;
+    public ThesisAssessor getThesisAssessor;
 
     public TAService(InitialContext ctx) {
         try {
@@ -43,39 +44,39 @@ public class TAService {
     }
 
     private TADataStore getDataStore() {
-        if(dataStore == null){
+        if (dataStore == null) {
             dataStore = new TADataStore(getConnection());
         }
         return dataStore;
     }
 
 
-    public List<Announcement> getAnnouncements(){
+    public List<Announcement> getAnnouncements() {
         return getDataStore().findAllAnnouncements();
     }
 
-    public List<Career> getCareers(){
+    public List<Career> getCareers() {
 
         return getDataStore().findAllCareers();
     }
 
-    public List<Category> getCategories(){
+    public List<Category> getCategories() {
 
         return getDataStore().findAllCategories();
     }
 
-  public List<Message> getMessages(){
+    public List<Message> getMessages() {
 
         return getDataStore().findAllMessages();
     }
 
 
-    public List<Qualification> getQualifications(){
+    public List<Qualification> getQualifications() {
 
         return getDataStore().findAllQualifications();
     }
 
-    public List<Student> getStudents(){
+    public List<Student> getStudents() {
 
         return getDataStore().findAllStudents();
     }
@@ -107,4 +108,9 @@ public class TAService {
 
 
 
+
+    public ThesisAssessor getIdByThesisAssessor(String email, String password) {
+        return getDataStore().findIdByThesisAssessor(email,password);
     }
+}
+

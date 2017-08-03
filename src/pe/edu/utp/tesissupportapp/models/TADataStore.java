@@ -157,7 +157,8 @@ public class TADataStore {
         return getThesisAssessorsEntity().findAll();
     }
 
-    public Student findStudentById(int id) {
+
+     public Student findStudentById(int id) {
         return getStudentsEntity().findById(id);
     }
 
@@ -171,8 +172,13 @@ public class TADataStore {
         return getThesisAssessorsEntity().update(thesisAssessor);
     }
 
+
     public ThesisAssessor findThesisAssessorById(int id) {
         return getThesisAssessorsEntity().findById(id);
     }
 
-   }
+
+    public ThesisAssessor findIdByThesisAssessor(String email, String password) {
+        return getThesisAssessorsEntity().findByEmailAndPassword(email,password);
+    }
+}

@@ -1,8 +1,5 @@
 package pe.edu.utp.tesissupportapp.models;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,10 +27,16 @@ public class ThesisAssessorsEntity extends BaseEntity {
     }
 
     public ThesisAssessor findByName(String name) {
-        String criteria = " fist_name = '" +
+        String criteria = " username = '" +
                 name + "'";
         return findByCriteria(criteria).get(0);
     }
+
+    public ThesisAssessor findByIdByEmailPassword(String email, String password) {
+        String criteria= " email = '"+email+"' and password = '"+password+"'";
+        return findByCriteria(criteria).get(0);
+    }
+
 
     public List<ThesisAssessor> findAllOrderedByName() {
         String criteria = "true ORDER BY first_name";
@@ -119,5 +122,47 @@ public class ThesisAssessorsEntity extends BaseEntity {
         return change(sql);
     }
 
+       public ThesisAssessor findByEmailAndPassword(String email, String password) {
+        return findIdByEmailPassword(email,password).get(0);
     }
+
+    public List<ThesisAssessor> findIdByEmailPassword(String email, String password) {
+        String sql ="select id,username,password,last_name,first_name,email,photo_path,phone_number,gender,degree_document,country,city,street,cv_path from thesis_assessors where email='"+ email+"' and password ='"+password+"'";
+        List<ThesisAssessor> thesisAssessors = new ArrayList<>();
+        try {
+            ResultSet rs = getConnection().createStatement().executeQuery(sql);
+            if(rs == null) return null;
+            while(rs.next()) thesisAssessors.add(ThesisAssessor.build(rs));
+            return thesisAssessors;
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return thesisAssessors;
+    }
+
+
+   /*  private Connection conn = null;
+   private Statement st = null;
+    private ResultSet rs = null;
+
+    public boolean validar(String email ,
+                           String password ){
+        boolean encontrado = false;
+        try {
+            conn = this.getConnection();
+            st = conn.createStatement();
+            rs=st.executeQuery("select * from" +
+                    " thesisassessorsbd.thesis_assessors where email = '"+email+"' and password = '"+password+"'");
+            if (rs.next()){
+                encontrado=true;
+            }
+            this.closesConnection();
+        }catch (Exception e){
+
+        }
+        return encontrado;
+    }*/
+
+
+}
 
