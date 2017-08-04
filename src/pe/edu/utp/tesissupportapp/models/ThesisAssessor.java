@@ -178,19 +178,19 @@ public class ThesisAssessor {
         try {
             return (new ThesisAssessor())
                     .setId(resultSet.getInt("id"))
-                    .setUsername(resultSet.getString("username"))
+                   /* .setUsername(resultSet.getString("username")) */
                     .setPassword(resultSet.getString("password"))
                     .setLastName(resultSet.getString("last_name"))
                     .setFirstName(resultSet.getString("first_name"))
-                    .setEmail(resultSet.getString("email"))
-                    .setPhotoPath(resultSet.getString("photo_path"))
+                    .setEmail(resultSet.getString("email"));
+                    /*.setPhotoPath(resultSet.getString("photo_path"))
                     .setPhoneNumber(resultSet.getInt("phone_number"))
                     .setGender(resultSet.getString("gender"))
                     .setDegreeDocument(resultSet.getString("degree_document"))
                     .setStreet(resultSet.getString("country"))
                     .setCity(resultSet.getString("city"))
                     .setCountry(resultSet.getString("street"))
-                    .setCvPath(resultSet.getString("cv_path"));
+                    .setCvPath(resultSet.getString("cv_path"));*/
 
         } catch (SQLException e) {
             e.printStackTrace();

@@ -46,12 +46,12 @@ public class ThesisAssessorsEntity extends BaseEntity {
 
     public List<ThesisAssessor> findByCriteria(String criteria) {
         String sql = getDefaultQuery() + (criteria.equalsIgnoreCase("") ? "" : " WHERE " + criteria);
-        List<ThesisAssessor> thesisAssessors = new ArrayList<>();
+        List<ThesisAssessor> thesisAssessor = new ArrayList<>();
         try {
             ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
             if (resultSet == null) return null;
             while (resultSet.next()) {
-                thesisAssessors.add((new ThesisAssessor())
+                thesisAssessor.add((new ThesisAssessor())
                         .setId(resultSet.getInt("id"))
                         .setUsername(resultSet.getString("username"))
                         .setPassword(resultSet.getString("password"))
@@ -67,7 +67,7 @@ public class ThesisAssessorsEntity extends BaseEntity {
                         .setCountry(resultSet.getString("street"))
                         .setCvPath(resultSet.getString("cv_path")));
             }
-            return thesisAssessors;
+            return thesisAssessor;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -78,7 +78,7 @@ public class ThesisAssessorsEntity extends BaseEntity {
         String sql = "INSERT INTO thesis_assessors(id, username, password, last_name, first_name, email, photo_path, phone_number, gender, degree_document, country, city, street, cv_path) " +
                 "VALUES(" +
                 thesisAssessor.getId() + ", " +
-                "'" + thesisAssessor.getUsername() + "'" + ", " +
+               "'" + thesisAssessor.getUsername() + "'" + ", " +
                 "'" + thesisAssessor.getPassword() + "'" + ", " +
                 "'" + thesisAssessor.getLastName() + "'" + ", " +
                 "'" + thesisAssessor.getFirstName() + "'" + ", " +
@@ -128,16 +128,16 @@ public class ThesisAssessorsEntity extends BaseEntity {
 
     public List<ThesisAssessor> findIdByEmailPassword(String email, String password) {
         String sql ="select id,username,password,last_name,first_name,email,photo_path,phone_number,gender,degree_document,country,city,street,cv_path from thesis_assessors where email='"+ email+"' and password ='"+password+"'";
-        List<ThesisAssessor> thesisAssessors = new ArrayList<>();
+        List<ThesisAssessor> thesisAssessor = new ArrayList<>();
         try {
             ResultSet rs = getConnection().createStatement().executeQuery(sql);
             if(rs == null) return null;
-            while(rs.next()) thesisAssessors.add(ThesisAssessor.build(rs));
-            return thesisAssessors;
+            while(rs.next()) thesisAssessor.add(ThesisAssessor.build(rs));
+            return thesisAssessor;
         } catch(SQLException e) {
             e.printStackTrace();
         }
-        return thesisAssessors;
+        return thesisAssessor;
     }
 
 

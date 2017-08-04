@@ -112,5 +112,9 @@ public class TAService {
     public ThesisAssessor getIdByThesisAssessor(String email, String password) {
         return getDataStore().findIdByThesisAssessor(email,password);
     }
+
+    public boolean createThesisAssessor(ThesisAssessor thesisAssessor) {
+        return getDataStore().createThesisAssessor(thesisAssessor);
+    }
 }
 

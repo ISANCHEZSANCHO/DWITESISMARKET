@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: USER
@@ -8,9 +9,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>List ThesisAssesor</title>
 </head>
 <body>
+<jsp:useBean id="service" class="pe.edu.utp.tesissupportapp.services.TAService"/>
 
+<c:forEach var="thesisAssessors" items="${service.thesis_assessors}">
+
+    <p><c:out value="${thesisAssessors.firstName}"/>
+        <c:out value="${thesisAssessors.lastName}"/>
+        <c:out value="${thesisAssessors.email}"/>
+        <c:out value="${thesisAssessors.password}"/>
+         <a href="thesisAssessors?action=edit&id=<c:out value="${thesisAssessors.id}"/>">
+            Edit
+        </a>
+    </p>
+</c:forEach>
+<a href="thesisAssessors?action=add">Add thesisAssessors</a>
 </body>
 </html>

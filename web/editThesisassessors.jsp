@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Edit ThesisAssessor</title>
+    <title>Edit ThesisAssessors</title>
 </head>
 <body>
-
+<jsp:include page="_ThesisAssessorF.jsp"/>
 </body>
 </html>

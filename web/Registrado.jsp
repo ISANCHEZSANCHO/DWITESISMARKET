@@ -1,16 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
   User: USER
-  Date: 15/07/2017
-  Time: 5:06 AM
+  Date: 3/08/2017
+  Time: 11:20 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add Thesisassessors</title>
+    <title>Registrado</title>
 </head>
 <body>
-<jsp:include page="_NThesisAssessor.jsp"/>
+<h2>REGISTRADO</h2>
 </body>
 </html>

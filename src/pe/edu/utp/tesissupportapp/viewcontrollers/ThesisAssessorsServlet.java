@@ -11,11 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Date;
 
 /**
  * Created by USER on 15/07/2017.
  */
-@WebServlet(name = "ThesisAssessorsServlet" ,  urlPatterns = "/thesis_assessors")
+@WebServlet(name = "ThesisAssessorsServlet" ,  urlPatterns = "/thesisAssessors")
 public class ThesisAssessorsServlet extends HttpServlet {
 
     TAService service =new TAService();
@@ -42,13 +43,30 @@ public class ThesisAssessorsServlet extends HttpServlet {
                 thesisAssessor.setStreet(request.getParameter("country"));
                 thesisAssessor.setCity(request.getParameter("city"));
                 thesisAssessor.setCountry(request.getParameter("street"));
-                thesisAssessor.setCountry(request.getParameter("cv_path"));
+                thesisAssessor.setCvPath(request.getParameter("cv_path"));
 
                 String message = service.updateThesisAssessor(thesisAssessor) ?
                         "Update success" :
                         "Error while updating";
                 log(message);
+                break;
             }
+            case "create": {
+ThesisAssessor thesisAssessor = new ThesisAssessor();
+            thesisAssessor.setFirstName(request.getParameter("first_name"));
+            thesisAssessor.setLastName(request.getParameter("last_name"));
+                thesisAssessor.setEmail(request.getParameter("email"));
+                thesisAssessor.setEmail(request.getParameter("password"));
+                String message = service.createThesisAssessor(thesisAssessor) ?
+                        "Create success" :
+                        "Error while creating";
+                log(message);
+                break;
+
+            }
+
+
+
         }
         RequestDispatcher dispatcher =
                 request.getRequestDispatcher(THESISASSESSORS_INDEX_URI);
@@ -67,19 +85,8 @@ public class ThesisAssessorsServlet extends HttpServlet {
             }
             case "edit": {
                 ThesisAssessor thesisAssessor = service.getThesisAssessorById(request.getParameter("id"));
-                request.setAttribute("username", thesisAssessor);
-                request.setAttribute("password", thesisAssessor);
-                request.setAttribute("last_name", thesisAssessor);
-                request.setAttribute("first_name", thesisAssessor);
-                request.setAttribute("email", thesisAssessor);
-                request.setAttribute("photo_psth", thesisAssessor);
-                request.setAttribute("phone_number", thesisAssessor);
-                request.setAttribute("gender", thesisAssessor);
-                request.setAttribute("degree_document", thesisAssessor);
-                request.setAttribute("country", thesisAssessor);
-                request.setAttribute("city", thesisAssessor);
-                request.setAttribute("street", thesisAssessor);
-                request.setAttribute("cv_path", "edit");
+                request.setAttribute("thesisAssessor", thesisAssessor);
+                request.setAttribute("action", "edit");
                 actionUri = THESISASSESSORS_EDIT_URI;
                 break;
             }

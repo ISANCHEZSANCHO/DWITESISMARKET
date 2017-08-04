@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: USER
@@ -24,6 +25,7 @@
     <title>Registrarse</title>
 </head>
 <body>
+
 <div class="container">
     <div class="row main">
         <div class="panel-heading">
@@ -33,34 +35,34 @@
             </div>
         </div>
         <div class="main-login main-center">
-            <form class="form-horizontal" method="post" action="#">
+            <form class="form-horizontal" action="<c:url value="/thesisAssessors"/>" method="post" >
 
                 <div class="form-group">
-                    <label for="name" class="cols-sm-2 control-label">Nombres</label>
+                    <label for="first_name" class="cols-sm-2 control-label">Nombres</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                            <input type="text" class="form-control" name="first_name" id="first_name"  placeholder="Enter your Name"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Apellidos</label>
+                    <label for="last_name" class="cols-sm-2 control-label">Apellidos</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                            <input type="text" class="form-control" name="last_name" id="last_name"  placeholder="Enter your Email"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="username" class="cols-sm-2 control-label">Correo electrónico</label>
+                    <label for="email" class="cols-sm-2 control-label">Correo electrónico</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
                         </div>
                     </div>
                 </div>
@@ -86,7 +88,8 @@
 </div>--%>
 
 <div class="form-group ">
-    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+    <input type="hidden" value="create" name="action"/>
+    <button type="button" class="btn btn-primary btn-lg btn-block login-button" value="Registrar" name="action"/>Registrar</button>
 </div>
 <div class="login-register">
     <a href="login.jsp">Ingresar</a>

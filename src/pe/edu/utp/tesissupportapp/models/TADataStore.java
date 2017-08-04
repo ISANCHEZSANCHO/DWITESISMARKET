@@ -177,6 +177,10 @@ public class TADataStore {
         return getThesisAssessorsEntity().findById(id);
     }
 
+    public boolean createThesisAssessor(ThesisAssessor thesisAssessor) {
+
+        return getThesisAssessorsEntity().add(thesisAssessor);
+    }
 
     public ThesisAssessor findIdByThesisAssessor(String email, String password) {
         return getThesisAssessorsEntity().findByEmailAndPassword(email,password);
