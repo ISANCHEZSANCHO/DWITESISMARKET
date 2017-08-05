@@ -9,7 +9,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/login.css" rel="stylesheet">
+
+    <link href="css/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/globales.css">
+    <link rel="stylesheet" href="css/global2.css">
+    <link rel="stylesheet" href="css/buscar.css">
     <title>Ingresar</title>
 </head>
 <body>
@@ -32,7 +39,8 @@
         </a></p>
     </div><!-- /card-container -->
 </div><!
-
+<section class="footer-center">
 <jsp:include page="Footer.jsp"/>
+</section>
 </body>
 </html>

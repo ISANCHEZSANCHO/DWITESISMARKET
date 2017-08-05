@@ -9,6 +9,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+          <link href="css/footer.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/globales.css">
+    <link rel="stylesheet" href="css/global2.css">
+    <link rel="stylesheet" href="css/buscar.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
@@ -38,35 +43,14 @@
             <form class="form-horizontal" action="<c:url value="/thesisAssessors"/>" method="post" >
 
                 <div class="form-group">
-                    <label for="first_name" class="cols-sm-2 control-label">Nombres</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="first_name" id="first_name"  placeholder="Enter your Name"/>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="last_name" class="cols-sm-2 control-label">Apellidos</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="last_name" id="last_name"  placeholder="Enter your Email"/>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Correo electrónico</label>
+                    <label for="password" class="cols-sm-2 control-label">Username</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                            <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="password" class="cols-sm-2 control-label">Contraseña</label>
                     <div class="cols-sm-10">
@@ -76,7 +60,88 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="last_name" class="cols-sm-2 control-label">Apellidos</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="last_name" id="last_name"  placeholder="Enter your Email"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="first_name" class="cols-sm-2 control-label">Nombres</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="first_name" id="first_name"  placeholder="Enter your Name"/>
+                        </div>
+                    </div>
+                </div>
 
+                                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Correo electrónico</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Telefono móvil</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="phone_number" id="phone_number"  placeholder="Enter your Password"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Género</label>
+                    <div class="cols-sm-10 input select">
+                        <div class="input-group">
+                            <select
+                                    name="sexe" data-type="required">
+                                <option
+                                        value="H"  selected>Hombre</option><option
+                                    value="F" >Mujer</option>
+                            </select>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">País</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="country" id="country"  placeholder="Enter your Email"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Ciudad</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="city" id="city"  placeholder="Enter your Email"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Dirección</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="street" id="street"  placeholder="Enter your Email"/>
+                        </div>
+                    </div>
+                </div>
 <%--<div class="form-group">
     <label for="confirm" class="cols-sm-2 control-label">Confirmar contraseña</label>
     <div class="cols-sm-10">
@@ -89,7 +154,7 @@
 
 <div class="form-group ">
     <input type="hidden" value="create" name="action"/>
-    <button type="button" class="btn btn-primary btn-lg btn-block login-button" value="Registrar" name="action"/>Registrar</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block login-button" value="thesisAssessor" name="action"/>Registrar</button>
 </div>
 <div class="login-register">
     <a href="login.jsp">Ingresar</a>
@@ -101,6 +166,8 @@
 
 <script type="text/javascript" src="assets/js/bootstrap.js"></script><hr />
 
-<jsp:include page="Footer.jsp"/>
+<section class="footer-center">
+    <jsp:include page="Footer.jsp"/>
+</section>
 </body>
 </html>
