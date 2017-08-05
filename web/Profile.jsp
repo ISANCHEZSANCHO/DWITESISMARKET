@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -38,7 +40,6 @@
 
 </head>
 <body>
-<h2>Bienvenido</h2>
 
 <div id="fb-root"></div>
 
@@ -86,7 +87,7 @@
     <a
             class="header-item" href="/ayuda.html">Ayuda</a>
     <a
-            class="header-item link_inscription" href="/nuevo-anuncio.html">Dar clases</a>
+            class="header-item link_inscription" href="Nuevoanuncio.jsp">Dar clases</a>
 
     <a
             class="header-item deconnexion" href="/deconnexion.php">Desconectarse</a></div></div><div
@@ -100,7 +101,7 @@
     <a
             class="header-item header-itemLink" href="/ayuda.html">Ayuda</a>
     <button
-            class="button button-radius a-js btn-donner-cours" data-href="/nuevo-anuncio.html">Dar clases</button><div
+            class="button button-radius a-js btn-donner-cours" data-href="Nuevoanuncio.jsp">Dar clases</button><div
             class="header-item">
         <a
                 href="Paneldecontrol.jsp" class="userConnected-v2" style="background-image: url('img/icon.jpg')"></a><div
@@ -109,8 +110,8 @@
             href="Paneldecontrol.jsp">Mi panel de control</a></li><li><a
             href="Solicitudesdeclase.jsp">Mis solicitudes de clases</a></li>
         <li><a
-                href="/panel-de-control-mi-perfil.html">Mi perfil</a></li><li><a
-                class="" href="/nuevo-anuncio.html">Dar clases</a></li>
+                href="Modificarperfil.jsp">Mi perfil</a></li><li><a
+                class="" href="Nuevoanuncio.jsp">Dar clases</a></li>
         <li><a
                 href="/deconnexion.php">Desconectarse</a></li></ul></div></div></div></div><div
         class="header-dashboard-submenu"><div
@@ -122,7 +123,7 @@
             href="Solicitudesdeclase.jsp" class="dashboard-header-link ">Mis solicitudes de clases</a></li>
     <li>
         <a
-                href="/panel-de-control-mi-perfil.html" class="dashboard-header-link ">Modificar mi perfil</a></li></ul>
+                href="Modificarperfil.jsp" class="dashboard-header-link ">Modificar mi perfil</a></li></ul>
 
     <a
             href="/" class="mobile-only back-to-site">
@@ -140,7 +141,7 @@
         class="update-announce-submenu-content"><li><a
         href="Solicitudesdeclase.jsp" class="dashboard-page-submenu-link">Mis solicitudes de clases</a></li>
     <li><a
-            href="/panel-de-control-mi-perfil.html" class="dashboard-page-submenu-link">Modificar mi perfil</a></li>
+            href="Modificarperfil.jsp" class="dashboard-page-submenu-link">Modificar mi perfil</a></li>
 </ul></li></ul></div></div></div></div><div class="page-dashboard submenu-mobile"><div class="wrapper"><div
         class="dashboard-column dashboard-sidebar"><div
         class="component-dashboard-sidebar teacher"><div

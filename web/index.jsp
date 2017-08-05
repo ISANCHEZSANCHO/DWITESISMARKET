@@ -13,6 +13,8 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/globales.css">
+    <link rel="stylesheet" href="css/global2.css">
     <link rel="stylesheet" href="css/buscar.css">
 </head>
   <body>
@@ -53,30 +55,237 @@
                   <input type="text" class="form-control input-lg" placeholder="Presencial, por Web Cam o en grupo" />
 
                   <span class="input-group-btn " >
-<span class="col-md-offset-12 " >
-                      <span class="col-md-offset-12"><input type="text" class="form-control input-lg" placeholder="¿Especialidad?" />
+<span class="col-md-offset-6 " >
+                      <span class="col-md-offset-10"><input type="text" class="form-control input-lg" placeholder="¿Especialidad?" />
 
                  <button class="btn btn-info btn-lg " type="button">
                      <i class="glyphicon glyphicon-search"></i>
                         </button>
-</>
 
+                      </span>
                       </span>
 </span>
 
-
               </div>
-
-
-
 
               </div>
               </div>
+        </section>
 
-
+  <section class="HomeV2">
+  <div
+          class="HomeV2_profsWrapper"><div
+          class="HomeV2_profsContainer"><div
+          class="HomeV2_profsCol">
+      <div
+              class="HomeV2_profsContent "><div
+              class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-profesor-idiomas-ingles-frances-espanol-ofrece-clases-madrid-clases-particulares.jpg')">
+          <a
+                  href="/profesor-idiomas-ingles-frances-espanol-ofrece-clases-madrid-clases-particulares.html"><div
+                  class="HomeV2_profHover"><div
+                  class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Euclides</span><ul
+                  class="rating rating-inline">
+              <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li
+                  class="ratingAvis"><div
+                  class="HomeV2_profsAvis">(2 opiniones)</div></li></ul><span
+                  class="HomeV2_profSubject">Inglés</span></div></div>
+          </a></div><div
+              class="HomeV2_profsHide"><ul
+              class="rating rating-inline ">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> </ul><div
+              class="HomeV2_profsAvis">(2 opiniones)</div></div></div><div
+          class="HomeV2_profsContent "><div
+          class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-licenciado-master-bellas-artes-clases-pintura-para-todos-los-niveles.jpg')">
+      <a
+              href="/licenciado-master-bellas-artes-clases-pintura-para-todos-los-niveles.html"><div
+              class="HomeV2_profHover"><div
+              class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Rodrigo</span><ul
+              class="rating rating-inline">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li
+              class="ratingAvis"><div
+              class="HomeV2_profsAvis">(7 opiniones)</div></li></ul><span
+              class="HomeV2_profSubject">Dibujo</span></div></div>
+      </a></div><div
+          class="HomeV2_profsHide"><ul
+          class="rating rating-inline ">
+      <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> </ul><div
+          class="HomeV2_profsAvis">(7 opiniones)</div></div></div></div><div
+          class="HomeV2_profsCol">
+      <div
+              class="HomeV2_profsContent "><div
+              class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-informatica-total-ingeniero-informatico-ensena-internet-redes-ccna-linux-java-office-web.jpg')">
+          <a
+                  href="/informatica-total-ingeniero-informatico-ensena-internet-redes-ccna-linux-java-office-web.html"><div
+                  class="HomeV2_profHover"><div
+                  class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Sergio</span><ul
+                  class="rating rating-inline">
+              <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-half"></li> <li
+                  class="ratingAvis"><div
+                  class="HomeV2_profsAvis">(3 opiniones)</div></li></ul><span
+                  class="HomeV2_profSubject">Programación</span></div></div>
+          </a></div><div
+              class="HomeV2_profsHide"><ul
+              class="rating rating-inline ">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-half"></li> </ul><div
+              class="HomeV2_profsAvis">(3 opiniones)</div></div></div></div><div
+          class="HomeV2_profsCol">
+      <div
+              class="HomeV2_profsContent "><div
+              class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-licenciada-comunicacion-audiovisual-imparte-clases-particulares-euskera-nativa-amplia-experiencia.jpg')">
+          <a
+                  href="/licenciada-comunicacion-audiovisual-imparte-clases-particulares-euskera-nativa-amplia-experiencia.html"><div
+                  class="HomeV2_profHover"><div
+                  class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Nekane</span><ul
+                  class="rating rating-inline">
+              <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li
+                  class="ratingAvis"><div
+                  class="HomeV2_profsAvis">(1 opinión)</div></li></ul><span
+                  class="HomeV2_profSubject">Euskera</span></div></div>
+          </a></div><div
+              class="HomeV2_profsHide"><ul
+              class="rating rating-inline ">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> </ul><div
+              class="HomeV2_profsAvis">(1 opinión)</div></div></div><div
+          class="HomeV2_profsContent "><div
+          class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-profesor-ingles-con-cap-valencia-con-amplia-experiencia-clases-valencia.jpg')">
+      <a
+              href="/profesor-ingles-con-cap-valencia-con-amplia-experiencia-clases-valencia.html"><div
+              class="HomeV2_profHover"><div
+              class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Adolfo</span><ul
+              class="rating rating-inline">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li
+              class="ratingAvis"><div
+              class="HomeV2_profsAvis">(6 opiniones)</div></li></ul><span
+              class="HomeV2_profSubject">Inglés</span></div></div>
+      </a></div><div
+          class="HomeV2_profsHide"><ul
+          class="rating rating-inline ">
+      <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> </ul><div
+          class="HomeV2_profsAvis">(6 opiniones)</div></div></div></div><div
+          class="HomeV2_profsCol">
+      <div
+              class="HomeV2_profsContent "><div
+              class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-profesora-yoga-hatha-vinyasa-terapeutico-kundalini-meditacion-para-todas-las-edades-clases-particulares-madrid.jpg')">
+          <a
+                  href="/profesora-yoga-hatha-vinyasa-terapeutico-kundalini-meditacion-para-todas-las-edades-clases-particulares-madrid.html"><div
+                  class="HomeV2_profHover"><div
+                  class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Mina</span><ul
+                  class="rating rating-inline">
+              <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li
+                  class="ratingAvis"><div
+                  class="HomeV2_profsAvis">(7 opiniones)</div></li></ul><span
+                  class="HomeV2_profSubject">Relajación</span></div></div>
+          </a></div><div
+              class="HomeV2_profsHide"><ul
+              class="rating rating-inline ">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> </ul><div
+              class="HomeV2_profsAvis">(7 opiniones)</div></div></div></div><div
+          class="HomeV2_profsCol">
+      <div
+              class="HomeV2_profsContent "><div
+              class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-profesor-area-financiera-economica-fiscalidad-finanzas-contabilidad-auditoria-contaplus-economia-gestion-integral.jpg')">
+          <a
+                  href="/profesor-area-financiera-economica-fiscalidad-finanzas-contabilidad-auditoria-contaplus-economia-gestion-integral.html"><div
+                  class="HomeV2_profHover"><div
+                  class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Jesus</span><ul
+                  class="rating rating-inline">
+              <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li
+                  class="ratingAvis"><div
+                  class="HomeV2_profsAvis">(1 opinión)</div></li></ul><span
+                  class="HomeV2_profSubject">Economía</span></div></div>
+          </a></div><div
+              class="HomeV2_profsHide"><ul
+              class="rating rating-inline ">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> </ul><div
+              class="HomeV2_profsAvis">(1 opinión)</div></div></div>
+      <div
+              class="HomeV2_profsContent "><div
+              class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-profesora-espanol-para-extranjeros-barcelona-online-por-skype.jpg')">
+          <a
+                  href="/profesora-espanol-para-extranjeros-barcelona-online-por-skype.html"><div
+                  class="HomeV2_profHover"><div
+                  class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Kasia</span><ul
+                  class="rating rating-inline">
+              <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-half"></li> <li
+                  class="ratingAvis"><div
+                  class="HomeV2_profsAvis">(24 opiniones)</div></li></ul><span
+                  class="HomeV2_profSubject">Español para extranjeros</span></div></div>
+          </a></div><div
+              class="HomeV2_profsHide"><ul
+              class="rating rating-inline ">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-half"></li> </ul><div
+              class="HomeV2_profsAvis">(24 opiniones)</div></div></div></div><div
+          class="HomeV2_profsCol">
+      <div
+              class="HomeV2_profsContent "><div
+              class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-m4t3m4t1c4s-4lc0rc0n-f1s1c4-4lc0rc0n-qu1m1c4-4lc0rc0n-eso-bachillerato-principalmente.jpg')">
+          <a
+                  href="/m4t3m4t1c4s-4lc0rc0n-f1s1c4-4lc0rc0n-qu1m1c4-4lc0rc0n-eso-bachillerato-principalmente.html"><div
+                  class="HomeV2_profHover"><div
+                  class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Jose Miguel</span><ul
+                  class="rating rating-inline">
+              <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li
+                  class="ratingAvis"><div
+                  class="HomeV2_profsAvis">(2 opiniones)</div></li></ul><span
+                  class="HomeV2_profSubject">Matemáticas</span></div></div>
+          </a></div><div
+              class="HomeV2_profsHide"><ul
+              class="rating rating-inline ">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> </ul><div
+              class="HomeV2_profsAvis">(2 opiniones)</div></div></div></div><div
+          class="HomeV2_profsCol">
+      <div
+              class="HomeV2_profsContent "><div
+              class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-profesora-lengua-literatura-rusa-nativa-clases-particulares-para-ninos-mayores-experiencia-economico-madrid-norte.jpg')">
+          <a
+                  href="/profesora-lengua-literatura-rusa-nativa-clases-particulares-para-ninos-mayores-experiencia-economico-madrid-norte.html"><div
+                  class="HomeV2_profHover"><div
+                  class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Elena</span><ul
+                  class="rating rating-inline">
+              <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li
+                  class="ratingAvis"><div
+                  class="HomeV2_profsAvis">(2 opiniones)</div></li></ul><span
+                  class="HomeV2_profSubject">Español para extranjeros</span></div></div>
+          </a></div><div
+              class="HomeV2_profsHide"><ul
+              class="rating rating-inline ">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> </ul><div
+              class="HomeV2_profsAvis">(2 opiniones)</div></div></div><div
+          class="HomeV2_profsContent "><div
+          class="HomeV2_profsImg" style="background-image: url('/imagenes/anuncios/clases-particular-profesor-particular-graduado-quimica-con-master-formacion-profesorado.jpg')">
+      <a
+              href="/profesor-particular-graduado-quimica-con-master-formacion-profesorado.html"><div
+              class="HomeV2_profHover"><div
+              class="HomeV2_profAbsolute">
+<span
+        class="HomeV2_profName">Antonio</span><ul
+              class="rating rating-inline">
+          <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-full"></li> <li class="star-half"></li> <li
+              class="ratingAvis"><div
+              class="HomeV2_profsAvis">(10 opiniones)</div></li></ul><span
+              class="HomeV2_profSubject">Matemáticas</span></div></div>
+      </a></div>
   </section>
-
-
 
   <!-- Aqui van los pasos -->
   <div style="background:#0078d1;">
@@ -99,10 +308,10 @@
 
         <article class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="margin-bottom: 40px;">
           <p>
-            <img src="img/icon-reserv-01.png" align="left" height="55px" style="margin-bottom: 10px"  class="visible-xs">
-            <img src="img/icon-reserv-01.png" align="left" height="60px" style="margin-bottom: 10px"  class="visible-sm">
-            <img src="img/icon-reserv.png" align="left" height="45px" style="margin-bottom: 10px"  class="visible-md">
-            <img src="img/icon-reserv.png" align="left" height="55px" style="margin-bottom: 10px"  class="visible-lg">
+            <img src="img/reserva.png" align="left" height="55px" style="margin-bottom: 10px"  class="visible-xs">
+            <img src="img/reserva.png" align="left" height="60px" style="margin-bottom: 10px"  class="visible-sm">
+            <img src="img/reserva.png" align="left" height="45px" style="margin-bottom: 10px"  class="visible-md">
+            <img src="img/reserva.png" align="left" height="55px" style="margin-bottom: 10px"  class="visible-lg">
           <h3 style="color: #f1f1f1; font-size: 23px; margin-bottom: 0px"><strong>Reserva</strong></h3>
           <p style="font-size: 17px; color: #f1f1f1;">tu clase hoy mismo. Obtendrás respuesta muy pronto.</p>
           </p>
