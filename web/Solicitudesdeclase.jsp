@@ -10,7 +10,7 @@
 <html lang="es">
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-    <title>Panel de control</title>
+    <title>Solicitudes de clase</title>
     <meta name="Description" lang="es" content="Clases particulares para estudiantes: TesisMarket, sitio Web puesta en relación entre Profesor y estudiante" />
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -64,14 +64,14 @@
         class="header-menu-inner"><div
         class="userConnected-v2" style="background-image: url('img/user-icon.png')"></div>
     <a
-            class="header-item" href="/panel-de-control.html">Mi panel de control</a>
+            class="header-item" href="Paneldecontrol.jsp">Mi panel de control</a>
     <a
-            class="header-item" href="/panel-de-control-mis-solicitudes-clases.html">Mis solicitudes de clases</a>
+            class="header-item" href="Solicitudesdeclase.jsp">Mis solicitudes de clases</a>
 
     <a
             class="header-item" href="/panel-de-control-mi-perfil.html">Mi perfil</a>
     <button
-            class="header-item a-js heart-icon-v2Before" data-href="/panel-de-control-mis-solicitudes-clases.html">Mensajes
+            class="header-item a-js heart-icon-v2Before" data-href="Solicitudesdeclase.jsp">Mensajes
 
     </button>
     <button
@@ -87,7 +87,7 @@
     <a
             class="header-item deconnexion" href="/deconnexion.php">Desconectarse</a></div></div><div
         class="header-inner-cell header-inner-cell-button header-right-v2 desktop-only"><button
-        class="header-item header-itemLink a-js heart-icon-v2Before" data-href="/panel-de-control-mis-solicitudes-clases.html">Mensajes </button>
+        class="header-item header-itemLink a-js heart-icon-v2Before" data-href="Solicitudesdeclase.jsp">Mensajes </button>
     <button
             class="header-item header-itemLink heart-icon-v2Before a-js favourites-button hidden" data-href="/mis-anuncios.html">Favoritos
         <span
@@ -99,11 +99,11 @@
             class="button button-radius a-js btn-donner-cours" data-href="/nuevo-anuncio.html">Dar clases</button><div
             class="header-item">
         <a
-                href="/panel-de-control.html" class="userConnected-v2" style="background-image: url('img/icon.jpg')"></a><div
+                href="Paneldecontrol.jsp" class="userConnected-v2" style="background-image: url('img/icon.jpg')"></a><div
             class="header-popinMenuContainer"><ul
             class="header-popinMenu" ><li><a
-            href="/panel-de-control.html">Mi panel de control</a></li><li><a
-            href="/panel-de-control-mis-solicitudes-clases.html">Mis solicitudes de clases</a></li>
+            href="Paneldecontrol.jsp">Mi panel de control</a></li><li><a
+            href="Solicitudesdeclase.jsp">Mis solicitudes de clases</a></li>
         <li><a
                 href="/panel-de-control-mi-perfil.html">Mi perfil</a></li><li><a
                 class="" href="/nuevo-anuncio.html">Dar clases</a></li>
@@ -113,16 +113,16 @@
         class="wrapper"><ul
         class="desktop-only"><li>
     <a
-            href="/panel-de-control.html" class="dashboard-header-link ">Panel de control</a></li><li>
+            href="Paneldecontrol.jsp" class="dashboard-header-link ">Panel de control</a></li><li>
     <a
-            href="/panel-de-control-mis-solicitudes-clases.html" class="dashboard-header-link current">Mis solicitudes de clases</a></li>
+            href="Solicitudesdeclase.jsp" class="dashboard-header-link current">Mis solicitudes de clases</a></li>
     <li>
         <a
                 href="/panel-de-control-mi-perfil.html" class="dashboard-header-link ">Modificar mi perfil</a></li></ul>
 
 
     <a
-            href="/panel-de-control.html" class="mobile-only back-to-site">
+            href="Paneldecontrol.jsp" class="mobile-only back-to-site">
         Volver al panel de control
     </a>
 </div></div>
@@ -130,11 +130,11 @@
             class="header-dashboard-page-submenu"><div
             class="wrapper desktop-only"><ul>
         <li><a
-                href="panel-de-control-mis-solicitudes-clases.html" class="dashboard-page-submenu-link current">Todas mis solicitudes</a></li>
+                href="Solicitudesdeclase.jsp" class="dashboard-page-submenu-link current">Todas mis solicitudes</a></li>
         <li><a
-                href="panel-de-control-mis-solicitudes-clases-aceptadas.html" class="dashboard-page-submenu-link ">Mis solicitudes aceptadas</a></li>
+                href="Solicitudesaceptadas.jsp" class="dashboard-page-submenu-link ">Mis solicitudes aceptadas</a></li>
         <li><a
-                href="panel-de-control-mis-solicitudes-clases-comentario.html" class="dashboard-page-submenu-link ">Mis opiniones</a></li>
+                href="Comentarios.jsp" class="dashboard-page-submenu-link ">Mis opiniones</a></li>
     </ul></div><div
             class="wrapper mobile-only update-announce-submenu-container"><ul><li
             class="dropdown" data-remember-choice="true" data-title="test">
@@ -142,11 +142,11 @@
         class="dashboard-page-submenu-link dropdown-toggle">Todas mis solicitudes</span><ul
             class="update-announce-submenu-content">
         <li><a
-                href="panel-de-control-mis-solicitudes-clases.html" class="dashboard-page-submenu-link current">Todas mis solicitudes</a></li>
+                href="Solicitudesdeclase.jsp" class="dashboard-page-submenu-link current">Todas mis solicitudes</a></li>
         <li><a
-                href="panel-de-control-mis-solicitudes-clases-aceptadas.html" class="dashboard-page-submenu-link ">Mis solicitudes aceptadas</a></li>
+                href="Solicitudesaceptadas.jsp" class="dashboard-page-submenu-link ">Mis solicitudes aceptadas</a></li>
         <li><a
-                href="panel-de-control-mis-solicitudes-clases-comentario.html" class="dashboard-page-submenu-link ">Mis opiniones</a></li>
+                href="Comentarios.jsp" class="dashboard-page-submenu-link ">Mis opiniones</a></li>
     </ul></li></ul></div></div></div></div><div class="page-dashboard submenu"><div class="wrapper"><div
         class="dashboard-column dashboard-sidebar"><div
         class="component-dashboard-sidebar teacher"><div
@@ -158,7 +158,7 @@
             class="dashboard-profile-options a-js" data-href="/panel-de-control-mi-perfil.html"></button></div></div><div
         class="dashboard-sidebar-section dashboard-sidebar-recommandation">
     <a
-            href="/panel-de-control-mis-solicitudes-clases-comentario.html" class="button button-medium button-transparent">Mis opiniones</a></div><div
+            href="Comentarios.jsp" class="button button-medium button-transparent">Mis opiniones</a></div><div
         class="dashboard-sidebar-section dashboard-sidebar-follow">
     <a
             class="follow-button favourites-button big" href="/mis-anuncios.html">
@@ -169,7 +169,13 @@
 </span>
         Favoritos
     </a>
-</div></div></div>
+</div></div></div><div class="dashboard-column dashboard-content"><div
+        class="course-demand-header"><h1 class="dashboard-title">Mis últimas solicitudes de clases</h1></div>
+    <p class="dashboard-subtitle">Aquí se mostrarán tus solicitudes de clases</p></div></div></div><div
+        class="notification valid hidden with-sub" id="errorNotification" data-timeout="15000"><div
+        class="wrapper"><p
+        class="notification-text"></p><div
+        class="notification-close"></div></div></div>
 
 </body>
 </html>
