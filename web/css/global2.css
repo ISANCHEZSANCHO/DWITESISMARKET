@@ -1,0 +1,409 @@
+/*
+p.message{
+	padding:10px;
+	background-color:#fff;
+}
+div.message{
+	padding:10px;
+	background-color:#fff;
+	margin-top:10px;
+}*/
+
+/* gestion des listes et icones de la sidebar des verification  mail/tel/diplome */
+/*
+ul.profil_statut{
+	padding:0px;
+	margin:0px;
+	margin-bottom:10px;
+}
+ul.profil_statut li{
+	list-style-type: none;
+	padding-left:30px;
+	text-align:left;
+}
+ul.profil_statut li span{
+	display:block;
+}
+ul.profil_statut li span:before{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	left:-20px;
+	background: url("../images/sprite.png") -240px -400px no-repeat transparent;
+	content:'';
+	vertical-align: middle;
+}
+ul.profil_statut li span.verified:before{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	left:-20px;
+	background: url("../images/sprite.png") -200px -400px no-repeat transparent;
+	content:'';
+	vertical-align: middle;
+}
+*/
+
+/* gestion des images non resizÃ© des image de stage*/
+
+.stage-img-preview{
+    margin: 10px auto;
+    text-align:center;
+}
+.stage-img-preview img{
+    max-width:100%;
+    margin: 10px auto;
+}
+
+/* gerer l'espace vertical de la partie stage /video */
+/*
+.register-teacher-step7 .register-video-input-container{
+	margin: 10px auto;
+}
+.register-teacher-step7 .register-video{
+	margin: 10px auto;
+}
+*/
+
+/* Pour placer les boutons de validation l'un en dessous de l'autre dans la modif des stages (idem annonces)*/
+/*
+.dashboard-content .form-actions button{
+	float:right;
+	clear:both;
+	margin:5px;
+}
+*/
+/*  A VOIR */
+/*
+.dashboard-content .section{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+.dashboard-content .wrapper{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+*/
+/* sur la page des demandes pour gerer l'espace perdu en bas si peu de demandes  */
+/*
+.course-demand-list{
+	min-height:auto;
+}
+*/
+/* pour le tdb home afin que le menu pousse le reste vers le bas */
+/*
+.submenu-mobile {
+	clear:both;
+}
+
+@media (max-width: 980px) {
+		.submenu-mobile .dashboard-content{
+		padding-top:45px;
+	}
+}
+*/
+/* suppression de l'image devant les liens de retour sur mobile */
+/*
+.back-to-site:before{
+	background:none;
+}
+*/
+
+
+/* liens des pages de traduction d'annonce sur la page des annonces*/
+/*
+a.traduction_annonce{
+	color:#000;
+	text-decoration:none;
+}
+*/
+/*
+.dashboard-manage-announce-lang-item {
+    background-color: #fff;
+    box-shadow: 0 1px 0 #e6e6e6;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: -3px;
+    padding: 6px 10px 6px 10px;
+}
+.dashboard-manage-announce-lang-item:hover{
+	background-color: #000;
+	-webkit-transition:: background-color 0.2s ease-in, border 0.2s ease-in, color 0.2s ease-in;
+	transition: background-color 0.2s ease-in, border 0.2s ease-in, color 0.2s ease-in;
+}
+.dashboard-manage-announce-lang-item:hover a{
+	color:#fff;
+}
+*/
+/* bouton annulation des demandes cote eleve (pour centrer les boutons) */
+/*
+.bouttons-annulation{
+	text-align: center;
+}
+*/
+.bouttons-annulation input[type="submit"] {
+    margin: 5px;
+}
+
+
+/* alignement a gauche de la ville de la demande en responsive */
+.course-demand-page .course-demand-item-picto .item-localization {
+    display: inline;
+}
+
+/* height des demandes*/
+.course-demand-item-picto .item-description {
+    position: relative;
+    height: 76px;
+    overflow: hidden;
+    margin: 0;
+}
+
+/*on remonte les bouton de la demande */
+.course-demand-page-sidebar .item-prices {
+    margin-bottom: 30px;
+}
+
+/* picto webcam sur les demandes */
+.course-demand-list .picto-localization.webcam{
+    background-position :-280px -280px;
+}
+
+/* garder la hauteur du span "1er cours offert" dans ma demande meme si vide */
+.course-demand-page-sidebar .item-prices {
+    height: 49px;
+}
+
+/* alignement des icones sur la liste des demandes + harmonisation des styles*/
+.course-demand-list .item-localization .item-column{
+    width:auto;
+    padding-right:4px;
+}
+.course-demand-list .item-localization .item-column .picto-localization{
+    width:16px;
+    height:15px;
+}
+.course-demand-list .item-contact .picto-mail{
+    width:21px;
+    height:15px;
+    padding-right:4px;
+
+}
+.course-demand-list .phone-text,
+.course-demand-list .item-contact a{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* patch css statisitiques */
+/*.dashboard-statistics-content h2.component-search-result-title{
+	white-space:normal;
+}
+
+.dashboard-statistics-content .component-search-result-content{
+	width:auto;
+	max-width:none;
+}
+*/
+
+/* Patch CSS pour les favoris*/
+/*.subscription-results h2.component-search-result-title{
+	white-space:normal;
+}
+.subscription-results .component-search-results.min.double .component-search-result{
+	width:100%;
+}
+.subscription-results .component-search-result-content{
+	width:auto;
+}
+.subscription-results .component-search-results .component-search-result .component-search-result-hover-button:hover {
+    background-color: #4d585d;
+    color: #fff;
+}
+.subscription-results .component-search-results .component-search-result .component-search-result-hover-button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px 30px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #818181;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.subscription-results .component-search-results .component-search-result .component-search-result-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 25px 0;
+    z-index: 3;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+.subscription-results .component-search-result:hover > .component-search-result-hover{
+	display: block;
+}
+.subscription-results .component-search-result-profile-photo {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: auto;
+    min-height: auto;
+}*/
+
+
+/* pour pas que l'adrese depasse sur les bouton dans le detail d'une demande */
+.course-demand-page-header .item-localization .item-address {
+    max-width: 420px;
+}
+
+/* lien clickable sans style de la description des demandes et des annonces */
+a.link_no_style{
+    color:inherit;
+    text-decoration: none;
+}
+
+/* afficher prix/1er cours sur une seule ligne en responsive des demandes*/
+@media (max-width: 980px) {
+    .course-demand-list .course-demand-item-description .item-prices .item-price {
+        display: inline;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .course-demand-list .course-demand-item-description .item-prices .item-highlight {
+        display: inline;
+        color: #04055e;
+    }
+}
+
+/* couleur du 1er cours offert dans la demande en responsive des demandes*/
+@media (max-width: 980px) {
+    .course-demand-page .item-highlight {
+        color: #04055e;
+    }
+}
+
+/* gestion des boutons des annonces en responsive*/
+@media (max-width: 980px){
+    .dashboard-manage-announce-manage .button.last{
+        display: block;
+    }
+    .dashboard-manage-announce-manage .button {
+        width:100px;
+    }
+}
+
+/* hauteur des images des annonces*/
+.dashboard-content .dashboard-manage-announce-profile {
+    height: 155px;
+}
+
+/* espacement en hauteur des demandes en responsive*/
+@media (max-width: 980px){
+    .course-demand-page-content .content-column {
+        font-size: 14px;
+    }
+}
+/* espacement en hauteur des demandes en responsive*/
+@media (max-width: 980px){
+    .course-demand-list .item-localization{
+        margin-bottom:3px;
+    }
+    .course-demand-list .item-contact{
+        margin-top:0px;
+    }
+    .course-demand-list .item-contact div{
+        margin-bottom:3px;
+    }
+    .course-demand-list .fields-mobile{
+        padding-bottom:3px;
+    }
+    .course-demand-list .item-contact .phone-text,
+    .course-demand-list .item-contact .picto-phone{
+        vertical-align:middle;
+    }
+
+}
+
+/* label sur 2 lignes dans la demande - #156 */
+@media (max-width: 980px){
+    .course-demand-page-content .title-return{
+        display:block;
+        width:100%;
+    }
+    .course-demand-page-content>div>p {
+        margin: 0;
+    }
+    /*
+    .course-demand-page-content .component-radio-register {
+    	margin-top: 5px;
+    }*/
+
+    .course-demand-state {
+        width: auto;
+    }
+    .course-demand-page-header {
+        margin-top: 10px;
+    }
+    .course-demand-page-sidebar {
+        text-align: center;
+    }
+    .course-demand-page-header {
+        padding-bottom: 0px;
+    }
+}
+
+/* patch favoris tdb en responsive */
+/*
+@media (max-width: 980px){
+	.subscription-results .component-search-results.min.double .component-search-result {
+    	width: 100%;
+   	}
+   	.component-search-results.min .component-search-result .component-search-result-hover-button {
+	    margin: 5px 10%;
+	}
+}
+*/
+.update-profile-header .dashboard-title {
+    width: auto;
+}
+.update-profile-form .form-label:first-letter{
+    text-transform:uppercase;
+}
+/*
+.announce-author-profile.pro:after {
+    content: '';
+    background: url("/public/style/images/pictos/pro.png") no-repeat transparent;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -20px;
+    margin-right: -20px;
+    z-index: 100;
+}
+*/
+
+.subscription-results li.component-search-result {
+    padding-left:5px;
+    padding-right:5px;
+}
+.subscription-results .component-search-result:hover .component-search-result-hover {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.dashboard-title {
+    width: 100% !important;
+}
+
+
+.popin-overlay {
+    z-index:198 !important;
+}
