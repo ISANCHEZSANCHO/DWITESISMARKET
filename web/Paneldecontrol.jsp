@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: USER
-  Date: 15/07/2017
-  Time: 3:24 PM
+  Date: 5/08/2017
+  Time: 11:59 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <title>Panel de control</title>
     <meta name="Description" lang="es" content="Clases particulares para estudiantes: TesisMarket, sitio Web puesta en relación entre Profesor y estudiante" />
@@ -32,14 +32,8 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
     <style type="text/css">.popin-overlay.hidden,.notification.hidden{visibility:hidden}</style>
-
-
-
-
 </head>
 <body>
-<h2>Bienvenido</h2>
-
 <div id="fb-root"></div>
 
 
@@ -54,7 +48,7 @@
         class="header-burger-icon"></span>
     </button>
     <a
-            class="header-logo header-logo-normal" href="/" title="title_logo_TesisMarket, clases particulares">
+            class="header-logo header-logo-normal" href="/" title="title_logo_Tesis Market, clases particulares">
         <img
                 src="img/logo.png"
                 srcset="img/logo.png"
@@ -66,7 +60,7 @@
     <button
             class="header-burger-close"></button><div
         class="header-menu-inner"><div
-        class="userConnected-v2" style="background-image: url('img/user-icon.png');width: 256px;height: 256px;"></div>
+        class="userConnected-v2" style="background-image: url('img/user-icon.png')"></div>
     <a
             class="header-item" href="Paneldecontrol.jsp">Mi panel de control</a>
     <a
@@ -128,20 +122,19 @@
             href="/" class="mobile-only back-to-site">
         Volver a la página
     </a>
-</div></div>
 
 </div></div>
-<div
-        class="header-dashboard-page-submenu mobile-only"><div
-        class="wrapper update-announce-submenu-container"><ul><li
-        class="dropdown" data-remember-choice="true" data-title="test">
+    <div
+            class="header-dashboard-page-submenu mobile-only"><div
+            class="wrapper update-announce-submenu-container"><ul><li
+            class="dropdown" data-remember-choice="true" data-title="test">
 <span
         class="dashboard-page-submenu-link dropdown-toggle">Panel de control</span><ul
-        class="update-announce-submenu-content"><li><a
-        href="Solicitudesdeclase.jsp" class="dashboard-page-submenu-link">Mis solicitudes de clases</a></li>
-    <li><a
-            href="/panel-de-control-mi-perfil.html" class="dashboard-page-submenu-link">Modificar mi perfil</a></li>
-</ul></li></ul></div></div></div></div><div class="page-dashboard submenu-mobile"><div class="wrapper"><div
+            class="update-announce-submenu-content"><li><a
+            href="Solicitudesdeclase.jsp" class="dashboard-page-submenu-link">Mis solicitudes de clases</a></li>
+        <li><a
+                href="/panel-de-control-mi-perfil.html" class="dashboard-page-submenu-link">Modificar mi perfil</a></li>
+    </ul></li></ul></div></div></div></div><div class="page-dashboard submenu-mobile"><div class="wrapper"><div
         class="dashboard-column dashboard-sidebar"><div
         class="component-dashboard-sidebar teacher"><div
         class="dashboard-profile-picture">
