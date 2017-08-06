@@ -43,11 +43,11 @@
             <form class="form-horizontal" action="<c:url value="/thesisAssessors"/>" method="post" >
 
                 <div class="form-group">
-                    <label for="password" class="cols-sm-2 control-label">Username</label>
+                    <label for="password" class="cols-sm-2 control-label">Usuario</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                            <input type="text" class="form-control" name="username" id="username"  placeholder="Ingrese usuario "/>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                            <input type="password" class="form-control" name="password" id="password"  placeholder="Ingrese contraseña"/>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="last_name" id="last_name"  placeholder="Enter your Email"/>
+                            <input type="text" class="form-control" name="last_name" id="last_name"  placeholder="Ingrese Apellidos"/>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="first_name" id="first_name"  placeholder="Enter your Name"/>
+                            <input type="text" class="form-control" name="first_name" id="first_name"  placeholder="Ingrese Nombres"/>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                            <input type="text" class="form-control" name="email" id="email"  placeholder="Ingrese correo"/>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="phone_number" id="phone_number"  placeholder="Enter your Password"/>
+                            <input type="text" class="form-control" name="phone_number" id="phone_number"  placeholder="Ingrese móvil"/>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="country" id="country"  placeholder="Enter your Email"/>
+                            <input type="text" class="form-control" name="country" id="country"  placeholder="Ingrese País"/>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="city" id="city"  placeholder="Enter your Email"/>
+                            <input type="text" class="form-control" name="city" id="city"  placeholder="Ingrese ciudad"/>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="street" id="street"  placeholder="Enter your Email"/>
+                            <input type="text" class="form-control" name="street" id="street"  placeholder="Ingrese dirección"/>
                         </div>
                     </div>
                 </div>
